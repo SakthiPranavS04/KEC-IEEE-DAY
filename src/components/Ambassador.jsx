@@ -7,18 +7,21 @@ export default function Ambassador() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-tag">Student Leadership</span>
-          <h2 className="section-title">Meet Our Ambassador</h2>
+          <span className="section-tag section-tag-amber">Leadership & Mentorship</span>
+          <h2 className="section-title">
+            Meet Our <span className="gradient-text-amber">Ambassador</span>
+          </h2>
           <p className="section-subtitle">
-            Connecting aspiring student engineers with IEEE's worldwide network of opportunities.
+            Guiding students into the global IEEE ecosystem and fostering collaborative excellence.
           </p>
         </div>
 
-        {/* Ambassador Card */}
+        {/* Colorful Ambassador Card */}
         <div className="ambassador-container">
-          <div className="ambassador-card">
+          <div className="ambassador-card-colorful">
             {/* Ambassador Photo Column */}
             <div className="ambassador-image-container">
+              <div className="ambassador-photo-glow"></div>
               <img 
                 src={ambassadorData.photo} 
                 alt={ambassadorData.name} 
@@ -32,6 +35,7 @@ export default function Ambassador() {
 
             {/* Ambassador Details Column */}
             <div className="ambassador-content">
+              <div className="ambassador-tagline">Official Representative</div>
               <h3 className="ambassador-name">{ambassadorData.name}</h3>
               <div className="ambassador-designation">{ambassadorData.role}</div>
               <div className="ambassador-org">{ambassadorData.organization} &bull; {ambassadorData.college}</div>
@@ -40,15 +44,13 @@ export default function Ambassador() {
                 &ldquo;{ambassadorData.quote}&rdquo;
               </blockquote>
 
-              <p className="ambassador-bio">{ambassadorData.bio}</p>
-
               {/* Social Links */}
               <div className="ambassador-socials">
                 <a 
                   href={ambassadorData.socials.linkedin} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="social-circle-btn"
+                  className="social-circle-btn social-btn-linkedin"
                   aria-label="Ambassador LinkedIn profile"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -60,7 +62,7 @@ export default function Ambassador() {
 
                 <a 
                   href={ambassadorData.socials.email} 
-                  className="social-circle-btn"
+                  className="social-circle-btn social-btn-email"
                   aria-label="Email Ambassador"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -73,7 +75,7 @@ export default function Ambassador() {
                   href={ambassadorData.socials.instagram} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="social-circle-btn"
+                  className="social-circle-btn social-btn-instagram"
                   aria-label="Branch Instagram"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

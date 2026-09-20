@@ -5,88 +5,74 @@ export default function About() {
     <section id="about" className="about-section">
       <div className="container">
         <div className="about-grid">
-          {/* Left Column: Descriptive Story */}
+          {/* Left Column: Punchy, Visual Highlights */}
           <div className="about-left">
-            <span className="section-tag">About IEEE Day</span>
+            <span className="section-tag section-tag-cyan">Global Heritage</span>
             <h2 className="about-title">
-              Celebrating Global Innovation & Student Engineering Excellence
+              What is <span className="gradient-text-blue">IEEE Day?</span>
             </h2>
 
-            <p className="about-p">
-              <strong>IEEE Day</strong> commemorates the historic moment in 1884 when worldwide engineers and technical pioneers gathered for the very first time to share technical ideas, foster collaboration, and leverage technology for the benefit of humanity.
+            <p className="about-punchy-lead">
+              Commemorating 1884 when worldwide engineers first united to share technical ideas and advance technology for humanity.
             </p>
 
-            <p className="about-p">
-              Today, this annual celebration unites thousands of students, researchers, industry leaders, and educators across the globe. At <strong>KEC IEEE Student Branch</strong> (Kongu Engineering College), IEEE Day is our flagship stage to celebrate student innovation, technological exploration, and multidisciplinary collaboration.
-            </p>
-
-            <p className="about-p">
-              Whether through hands-on hackathons, technical paper discussions, hardware project exhibitions, or networking forums, our active society chapters empower students to build real-world competencies and contribute to the worldwide IEEE technical ecosystem.
-            </p>
-
-            <div className="about-features-list">
-              <div className="about-feature-item">
-                <svg className="about-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span className="about-feature-text">
-                  <strong>Global Connectivity:</strong> Direct access to IEEE Xplore digital library, international conferences, and technical mentors.
-                </span>
+            {/* 3 Colorful Feature Cards instead of long paragraphs */}
+            <div className="about-quick-cards">
+              <div className="quick-card quick-card-cyan">
+                <div className="quick-card-icon">🚀</div>
+                <div>
+                  <h4>Innovation</h4>
+                  <p>Fostering cutting-edge research, design sprints, and real-world breakthroughs.</p>
+                </div>
               </div>
 
-              <div className="about-feature-item">
-                <svg className="about-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span className="about-feature-text">
-                  <strong>Student Branch Excellence:</strong> Active society chapters across CS, PES, RAS, APS, ComSoc, WIE, and PELS.
-                </span>
+              <div className="quick-card quick-card-purple">
+                <div className="quick-card-icon">🤝</div>
+                <div>
+                  <h4>Collaboration</h4>
+                  <p>Uniting students, faculty, and industry pioneers worldwide.</p>
+                </div>
               </div>
 
-              <div className="about-feature-item">
-                <svg className="about-feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span className="about-feature-text">
-                  <strong>Hands-on Empowerment:</strong> Practical workshops, innovation challenges, and career acceleration for engineers.
-                </span>
+              <div className="quick-card quick-card-emerald">
+                <div className="quick-card-icon">💡</div>
+                <div>
+                  <h4>Technology</h4>
+                  <p>Hands-on coding, hardware labs, and multidisciplinary skills.</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Minimal IEEE-Themed Card */}
+          {/* Right Column: Colorful IEEE Stat Card */}
           <div className="about-right">
-            <div className="about-card">
-              <div className="about-card-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"></circle>
-                </svg>
-                <span>IEEE Madras Section</span>
+            <div className="about-card-vibrant">
+              <div className="about-vibrant-header">
+                <span className="badge-madras">IEEE Madras Section</span>
+                <span className="badge-code">STB29741</span>
               </div>
 
-              <h3 className="about-card-title">
-                KEC IEEE Student Branch Highlights
-              </h3>
+              <h3 className="about-card-title">KEC IEEE Student Branch</h3>
 
               <div className="about-stats-grid">
-                <div className="about-stat-box">
+                <div className="about-stat-box stat-gradient-cyan">
                   <div className="about-stat-number">400K+</div>
-                  <div className="about-stat-label">Global IEEE Members</div>
+                  <div className="about-stat-label">Global Members</div>
                 </div>
 
-                <div className="about-stat-box">
+                <div className="about-stat-box stat-gradient-amber">
                   <div className="about-stat-number">160+</div>
-                  <div className="about-stat-label">Countries Represented</div>
+                  <div className="about-stat-label">Countries</div>
                 </div>
 
-                <div className="about-stat-box">
+                <div className="about-stat-box stat-gradient-purple">
                   <div className="about-stat-number">7</div>
-                  <div className="about-stat-label">Active KEC Chapters</div>
+                  <div className="about-stat-label">Active Chapters</div>
                 </div>
 
-                <div className="about-stat-box">
-                  <div className="about-stat-number">100%</div>
-                  <div className="about-stat-label">Student Driven</div>
+                <div className="about-stat-box stat-gradient-emerald">
+                  <div className="about-stat-number">1884</div>
+                  <div className="about-stat-label">Legacy Year</div>
                 </div>
               </div>
 
@@ -94,12 +80,9 @@ export default function About() {
                 <img 
                   src="/assets/logos/ieee-master.svg" 
                   alt="IEEE Logo" 
-                  style={{ height: '28px', width: 'auto' }} 
+                  style={{ height: '32px', width: 'auto' }} 
                 />
-                <div>
-                  <div className="about-branch-code">Branch Code: STB29741</div>
-                  <div className="about-branch-sub">Kongu Engineering College, Perundurai</div>
-                </div>
+                <span className="about-college-text">Kongu Engineering College, Perundurai</span>
               </div>
             </div>
           </div>

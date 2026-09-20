@@ -26,9 +26,8 @@ export default function SocietyCarousel() {
                 loading="lazy"
               />
             </div>
-            <span className="society-badge">{society.badge}</span>
+            <span className="society-badge">{society.shortName}</span>
             <div className="society-name-title">{society.name}</div>
-            <p className="society-short-desc">{society.description}</p>
           </a>
         ))}
       </div>

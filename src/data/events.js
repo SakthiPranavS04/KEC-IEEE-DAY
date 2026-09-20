@@ -1,7 +1,7 @@
 // ============================================================
 // KEC IEEE Student Branch - IEEE Day Celebration
 // Event Data Configuration
-// Replace the formUrl values with your actual Google Form links
+// Short, punchy descriptions and individual vibrant color themes
 // ============================================================
 
 export const events = [
@@ -9,77 +9,112 @@ export const events = [
     id: "event-01",
     number: "01",
     title: "Tech Talk",
-    category: "Keynote & Insights",
-    description: "An engaging session exploring emerging technologies and their impact on the future.",
+    category: "Keynote & Future Trends",
+    description: "Insights into next-gen tech shaping the future.",
     date: "10:00 AM - 11:30 AM",
-    venue: "Main Auditorium / Virtual",
+    venue: "Main Auditorium",
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-TechTalk-KEC-IEEE-Day/viewform",
-    icon: "tech-talk"
+    icon: "tech-talk",
+    theme: "cyan",
+    gradient: "linear-gradient(135deg, #00A3E0 0%, #00629B 100%)",
+    accentColor: "#00A3E0",
+    bgLight: "rgba(0, 163, 224, 0.08)",
+    borderLight: "rgba(0, 163, 224, 0.25)"
   },
   {
     id: "event-02",
     number: "02",
     title: "Innovation Challenge",
-    category: "Ideation & Problem Solving",
-    description: "Showcase your creativity and solve interesting technology-driven challenges.",
+    category: "Ideation & Pitch",
+    description: "Pitch bold solutions to real-world engineering problems.",
     date: "11:45 AM - 01:15 PM",
-    venue: "Innovation Hub, Mechanical Block",
+    venue: "Innovation Hub",
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-InnovationChallenge-KEC-IEEE-Day/viewform",
-    icon: "innovation"
+    icon: "innovation",
+    theme: "amber",
+    gradient: "linear-gradient(135deg, #F59E0B 0%, #D97706 100%)",
+    accentColor: "#F59E0B",
+    bgLight: "rgba(245, 158, 11, 0.08)",
+    borderLight: "rgba(245, 158, 11, 0.25)"
   },
   {
     id: "event-03",
     number: "03",
     title: "Coding Sprint",
-    category: "Programming & Algorithms",
-    description: "Put your programming skills to the test through an exciting coding challenge.",
+    category: "Rapid Hack & Algorithms",
+    description: "Test speed, precision, and problem-solving prowess.",
     date: "02:00 PM - 03:30 PM",
     venue: "Computer Centre Lab 3",
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-CodingSprint-KEC-IEEE-Day/viewform",
-    icon: "coding"
+    icon: "coding",
+    theme: "emerald",
+    gradient: "linear-gradient(135deg, #10B981 0%, #059669 100%)",
+    accentColor: "#10B981",
+    bgLight: "rgba(16, 185, 129, 0.08)",
+    borderLight: "rgba(16, 185, 129, 0.25)"
   },
   {
     id: "event-04",
     number: "04",
     title: "Quiz Quest",
     category: "Trivia & Tech IQ",
-    description: "Test your knowledge of technology, engineering and IEEE through an interactive quiz.",
+    description: "Battle in a high-energy technology and IEEE quiz.",
     date: "03:45 PM - 04:45 PM",
     venue: "ECE Seminar Hall",
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-QuizQuest-KEC-IEEE-Day/viewform",
-    icon: "quiz"
+    icon: "quiz",
+    theme: "purple",
+    gradient: "linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)",
+    accentColor: "#8B5CF6",
+    bgLight: "rgba(139, 92, 246, 0.08)",
+    borderLight: "rgba(139, 92, 246, 0.25)"
   },
   {
     id: "event-05",
     number: "05",
     title: "Project Showcase",
-    category: "Exhibition & Hardware/Software",
-    description: "Explore innovative student projects and ideas created by young innovators.",
+    category: "Hardware & Software Expo",
+    description: "Exhibit innovative prototypes and creative inventions.",
     date: "10:30 AM - 01:00 PM",
-    venue: "Convention Centre Corridor",
+    venue: "Convention Corridor",
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-ProjectShowcase-KEC-IEEE-Day/viewform",
-    icon: "project"
+    icon: "project",
+    theme: "blue",
+    gradient: "linear-gradient(135deg, #0284C7 0%, #1D4ED8 100%)",
+    accentColor: "#0284C7",
+    bgLight: "rgba(2, 132, 199, 0.08)",
+    borderLight: "rgba(2, 132, 199, 0.25)"
   },
   {
     id: "event-06",
     number: "06",
     title: "Design & Create",
-    category: "Creative UI/UX & Prototyping",
-    description: "A creative challenge combining technology, design and problem-solving.",
+    category: "UI/UX & Product Sprint",
+    description: "Craft sleek interfaces and intuitive user experiences.",
     date: "01:30 PM - 03:00 PM",
-    venue: "Design Thinking Studio",
+    venue: "Design Studio",
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-DesignCreate-KEC-IEEE-Day/viewform",
-    icon: "design"
+    icon: "design",
+    theme: "rose",
+    gradient: "linear-gradient(135deg, #EC4899 0%, #BE123C 100%)",
+    accentColor: "#EC4899",
+    bgLight: "rgba(236, 72, 153, 0.08)",
+    borderLight: "rgba(236, 72, 153, 0.25)"
   },
   {
     id: "event-07",
     number: "07",
     title: "IEEE Connect",
     category: "Networking & Community",
-    description: "Connect, collaborate and interact with fellow IEEE members and technology enthusiasts.",
+    description: "Mingle, network, and collaborate with peers and mentors.",
     date: "05:00 PM - 06:30 PM",
     venue: "Open Air Amphitheatre",
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc-IEEEConnect-KEC-IEEE-Day/viewform",
-    icon: "connect"
+    icon: "connect",
+    theme: "indigo",
+    gradient: "linear-gradient(135deg, #6366F1 0%, #4338CA 100%)",
+    accentColor: "#6366F1",
+    bgLight: "rgba(99, 102, 241, 0.08)",
+    borderLight: "rgba(99, 102, 241, 0.25)"
   }
 ];
