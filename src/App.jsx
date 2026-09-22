@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import SplashScreen from './components/SplashScreen.jsx';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import About from './components/About.jsx';
@@ -8,8 +9,13 @@ import Societies from './components/Societies.jsx';
 import Footer from './components/Footer.jsx';
 
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
+
   return (
     <div className="app-container">
+      {/* 3-Second Initial Welcome Splash Screen */}
+      {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
+
       {/* 1. Sticky Navigation Bar */}
       <Navbar />
 
