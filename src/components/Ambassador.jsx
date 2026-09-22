@@ -1,7 +1,75 @@
-import React from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { ambassadorsData } from '../data/ambassador.js';
 
 export default function Ambassador() {
+  const sliderRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  // Smoothly scroll to a specific card index
+  const scrollToIndex = useCallback((index) => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const cards = container.querySelectorAll('.ambassador-card-spacious');
+    if (cards[index]) {
+      const card = cards[index];
+      const containerLeft = container.getBoundingClientRect().left;
+      const cardLeft = card.getBoundingClientRect().left;
+      const targetScroll = container.scrollLeft + (cardLeft - containerLeft) - (container.clientWidth - card.clientWidth) / 2;
+      container.scrollTo({
+        left: Math.max(0, targetScroll),
+        behavior: 'smooth'
+      });
+      setActiveIndex(index);
+    }
+  }, []);
+
+  const handlePrev = () => {
+    const nextIdx = (activeIndex - 1 + ambassadorsData.length) % ambassadorsData.length;
+    scrollToIndex(nextIdx);
+  };
+
+  const handleNext = () => {
+    const nextIdx = (activeIndex + 1) % ambassadorsData.length;
+    scrollToIndex(nextIdx);
+  };
+
+  // Sync active index when user scrolls or swipes
+  const handleScroll = () => {
+    if (!sliderRef.current) return;
+    const container = sliderRef.current;
+    const cards = container.querySelectorAll('.ambassador-card-spacious');
+    const containerCenter = container.getBoundingClientRect().left + container.clientWidth / 2;
+
+    let closestIdx = 0;
+    let minDistance = Infinity;
+
+    cards.forEach((card, idx) => {
+      const cardCenter = card.getBoundingClientRect().left + card.clientWidth / 2;
+      const distance = Math.abs(containerCenter - cardCenter);
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestIdx = idx;
+      }
+    });
+
+    setActiveIndex(closestIdx);
+  };
+
+  // Auto-move every 5 seconds (5000ms), pausing on hover
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => {
+        const next = (prev + 1) % ambassadorsData.length;
+        scrollToIndex(next);
+        return next;
+      });
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [isPaused, scrollToIndex]);
+
   return (
     <section id="ambassador" className="ambassador-section">
       <div className="container">
@@ -16,23 +84,38 @@ export default function Ambassador() {
           </p>
         </div>
 
-        {/* 5 Ambassadors Grid */}
-        <div className="ambassadors-grid">
-          {ambassadorsData.map((ambassador) => (
-            <div key={ambassador.id} className="ambassador-card-modern">
-              {/* Top Accent Gradient Bar */}
-              <div className="ambassador-card-bar" aria-hidden="true"></div>
+        {/* Horizontal Sliding Ambassador Cards (Spacious Layout) */}
+        <div 
+          className="ambassadors-slider-wrapper"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          {/* Slider Track */}
+          <div 
+            ref={sliderRef}
+            className="ambassadors-slider-track"
+            onScroll={handleScroll}
+            tabIndex="0"
+            aria-label="Ambassadors horizontal slider"
+          >
+            {ambassadorsData.map((ambassador, index) => (
+              <div 
+                key={ambassador.id} 
+                className={`ambassador-card-spacious ${activeIndex === index ? 'ambassador-card-active' : ''}`}
+                onClick={() => scrollToIndex(index)}
+              >
+                {/* Top Accent Gradient Bar */}
+                <div className="ambassador-card-bar" aria-hidden="true"></div>
 
-              {/* Ambassador Photo Header */}
-              <div className="ambassador-card-header">
-                <div className="ambassador-avatar-wrapper">
-                  <div className="ambassador-avatar-glow" aria-hidden="true"></div>
+                {/* Ambassador Photo Column */}
+                <div className="ambassador-image-container">
+                  <div className="ambassador-photo-glow" aria-hidden="true"></div>
                   <img 
                     src={ambassador.photo} 
                     alt={ambassador.name} 
-                    className="ambassador-card-avatar"
-                    width="120"
-                    height="120"
+                    className="ambassador-photo"
+                    width="200"
+                    height="200"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
@@ -41,73 +124,113 @@ export default function Ambassador() {
                   />
                   <span className="ambassador-badge-tag">{ambassador.badge}</span>
                 </div>
-              </div>
 
-              {/* Ambassador Details */}
-              <div className="ambassador-card-body">
-                <div className="ambassador-tagline">{ambassador.tagline}</div>
-                <h3 className="ambassador-card-name">{ambassador.name}</h3>
-                <div className="ambassador-card-role">{ambassador.role}</div>
-                <div className="ambassador-card-dept">{ambassador.department}</div>
-                <div className="ambassador-card-org">{ambassador.college}</div>
-
-                <blockquote className="ambassador-card-quote">
-                  &ldquo;{ambassador.quote}&rdquo;
-                </blockquote>
-
-                {/* Focus Area Tags */}
-                {ambassador.tags && (
-                  <div className="ambassador-card-tags">
-                    {ambassador.tags.map((tag, idx) => (
-                      <span key={idx} className="ambassador-tag-chip">{tag}</span>
-                    ))}
+                {/* Ambassador Details Column */}
+                <div className="ambassador-content">
+                  <div className="ambassador-tagline">{ambassador.tagline}</div>
+                  <h3 className="ambassador-name">{ambassador.name}</h3>
+                  <div className="ambassador-designation">{ambassador.role}</div>
+                  <div className="ambassador-org">
+                    {ambassador.department} &bull; {ambassador.college}
                   </div>
-                )}
 
-                {/* Social Links */}
-                <div className="ambassador-card-socials">
-                  <a 
-                    href={ambassador.socials.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="social-circle-btn social-btn-linkedin"
-                    aria-label={`${ambassador.name} LinkedIn profile`}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                      <rect x="2" y="9" width="4" height="12"></rect>
-                      <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                  </a>
+                  <blockquote className="ambassador-quote">
+                    &ldquo;{ambassador.quote}&rdquo;
+                  </blockquote>
 
-                  <a 
-                    href={ambassador.socials.email} 
-                    className="social-circle-btn social-btn-email"
-                    aria-label={`Email ${ambassador.name}`}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                  </a>
+                  {/* Focus Area Tags */}
+                  {ambassador.tags && (
+                    <div className="ambassador-card-tags">
+                      {ambassador.tags.map((tag, idx) => (
+                        <span key={idx} className="ambassador-tag-chip">{tag}</span>
+                      ))}
+                    </div>
+                  )}
 
-                  <a 
-                    href={ambassador.socials.instagram} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="social-circle-btn social-btn-instagram"
-                    aria-label="KEC IEEE Instagram"
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                  </a>
+                  {/* Social Links */}
+                  <div className="ambassador-socials" onClick={(e) => e.stopPropagation()}>
+                    <a 
+                      href={ambassador.socials.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="social-circle-btn social-btn-linkedin"
+                      aria-label={`${ambassador.name} LinkedIn profile`}
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </a>
+
+                    <a 
+                      href={ambassador.socials.email} 
+                      className="social-circle-btn social-btn-email"
+                      aria-label={`Email ${ambassador.name}`}
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </a>
+
+                    <a 
+                      href={ambassador.socials.instagram} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="social-circle-btn social-btn-instagram"
+                      aria-label="KEC IEEE Instagram"
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* Slider Navigation & Pagination */}
+          <div className="ambassador-slider-controls">
+            <button 
+              type="button" 
+              className="ambassador-nav-btn ambassador-prev-btn"
+              onClick={handlePrev}
+              aria-label="Previous ambassador card"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <div className="ambassador-dots" role="tablist" aria-label="Ambassador slider navigation">
+              {ambassadorsData.map((ambassador, idx) => (
+                <button
+                  key={ambassador.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={activeIndex === idx}
+                  aria-label={`Go to ${ambassador.name}`}
+                  className={`ambassador-dot ${activeIndex === idx ? 'active' : ''}`}
+                  onClick={() => scrollToIndex(idx)}
+                />
+              ))}
             </div>
-          ))}
+
+            <button 
+              type="button" 
+              className="ambassador-nav-btn ambassador-next-btn"
+              onClick={handleNext}
+              aria-label="Next ambassador card"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
