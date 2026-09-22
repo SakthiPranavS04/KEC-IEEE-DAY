@@ -47,7 +47,7 @@ export default function SplashScreen({ onFinish }) {
       {/* 3. Title & 3-Second Loading Bar (Directly on screen, No Card Frame) */}
       <div className="splash-bottom-bar">
         <h1 className="splash-hero-title">IEEE DAY CELEBRATION</h1>
-        <p className="splash-hero-subtitle">KEC IEEE Student Branch</p>
+        <p className="splash-hero-subtitle">KONGU ENGINEERING COLLEGE</p>
 
         {/* 3-Second Progress Bar */}
         <div className="splash-progress-track" aria-hidden="true">

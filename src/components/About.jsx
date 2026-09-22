@@ -65,11 +65,6 @@ export default function About() {
                   <div className="about-stat-label">Countries</div>
                 </div>
 
-                <div className="about-stat-box stat-gradient-purple">
-                  <div className="about-stat-number">7</div>
-                  <div className="about-stat-label">Active Chapters</div>
-                </div>
-
                 <div className="about-stat-box stat-gradient-emerald">
                   <div className="about-stat-number">1884</div>
                   <div className="about-stat-label">Legacy Year</div>

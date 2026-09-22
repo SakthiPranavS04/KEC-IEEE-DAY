@@ -95,7 +95,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#events" className="footer-nav-link" onClick={(e) => scrollToSection(e, 'events')}>
-                  All 7 Events
+                  All Events
                 </a>
               </li>
               <li>
@@ -105,7 +105,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#societies" className="footer-nav-link" onClick={(e) => scrollToSection(e, 'societies')}>
-                  Our 7 Societies
+                  Our Societies
                 </a>
               </li>
             </ul>

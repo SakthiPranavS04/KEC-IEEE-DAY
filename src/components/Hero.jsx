@@ -36,23 +36,11 @@ export default function Hero() {
           Join us in celebrating IEEE Day — a celebration of innovation, collaboration, technology and the global IEEE community.
         </p>
 
-        {/* Vibrant Action Buttons */}
+        {/* Vibrant Action Button */}
         <div className="hero-actions">
           <a 
             href="#events" 
             className="btn btn-gradient-glow"
-            onClick={(e) => scrollToSection(e, 'events')}
-          >
-            <span>Explore 7 Events</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <polyline points="19 12 12 19 5 12"></polyline>
-            </svg>
-          </a>
-
-          <a 
-            href="#events" 
-            className="btn btn-colorful-glass"
             onClick={(e) => scrollToSection(e, 'events')}
           >
             <span>Register Now</span>
