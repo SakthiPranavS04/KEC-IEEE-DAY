@@ -1038,82 +1038,119 @@ button {
   background-color: var(--color-bg-alt);
 }
 
-.ambassador-container {
-  max-width: 840px;
+.ambassadors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.ambassador-card-colorful {
+.ambassador-card-modern {
   background: #FFFFFF;
-  border: 1.5px solid rgba(245, 158, 11, 0.3);
-  border-radius: var(--radius-lg);
-  padding: 2.75rem;
-  box-shadow: 0 12px 36px rgba(245, 158, 11, 0.08);
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 2.75rem;
-  align-items: center;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-lg, 1.25rem);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 calc(33.333% - 1.4rem);
+  max-width: calc(33.333% - 1.4rem);
+  min-width: 300px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.ambassador-card-colorful::before {
-  content: '';
+.ambassador-card-modern:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(245, 158, 11, 0.16), 0 10px 20px rgba(0, 0, 0, 0.05);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.ambassador-card-bar {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 5px;
   background: linear-gradient(90deg, #F59E0B, #EA580C, #8B5CF6);
+  z-index: 4;
 }
 
-.ambassador-image-container {
+.ambassador-card-header {
+  padding: 2.25rem 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ambassador-avatar-wrapper {
   position: relative;
-  text-align: center;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 1.25rem;
 }
 
-.ambassador-photo-glow {
+.ambassador-avatar-glow {
   position: absolute;
-  inset: 0;
-  border-radius: var(--radius-md);
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.3) 0%, transparent 70%);
-  filter: blur(15px);
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.35) 0%, rgba(234, 88, 12, 0.1) 60%, transparent 80%);
+  filter: blur(10px);
   z-index: 1;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.ambassador-photo {
+.ambassador-card-modern:hover .ambassador-avatar-glow {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+.ambassador-card-avatar {
   position: relative;
   z-index: 2;
-  width: 210px;
-  height: 210px;
-  border-radius: var(--radius-md);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  border: 3px solid #FFFFFF;
+  border: 3.5px solid #FFFFFF;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease;
 }
 
-.ambassador-badge-tag {
+.ambassador-card-modern:hover .ambassador-card-avatar {
+  transform: scale(1.03);
+}
+
+.ambassador-card-header .ambassador-badge-tag {
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
   color: #FFFFFF;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-full);
+  padding: 0.28rem 0.75rem;
+  border-radius: 9999px;
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.35);
+  box-shadow: 0 4px 10px rgba(234, 88, 12, 0.35);
   z-index: 3;
+  letter-spacing: 0.02em;
 }
 
-.ambassador-content {
-  text-align: left;
+.ambassador-card-body {
+  padding: 0.5rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
 }
 
 .ambassador-tagline {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -1121,43 +1158,76 @@ button {
   margin-bottom: 0.35rem;
 }
 
-.ambassador-name {
-  font-size: 1.875rem;
-  font-weight: 900;
-  color: var(--color-dark);
-  line-height: 1.2;
-  margin-bottom: 0.25rem;
+.ambassador-card-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-dark, #0F172A);
+  line-height: 1.25;
+  margin-bottom: 0.3rem;
 }
 
-.ambassador-designation {
-  font-size: 1.0625rem;
+.ambassador-card-role {
+  font-size: 0.92rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-primary, #0284C7);
   margin-bottom: 0.25rem;
 }
 
-.ambassador-org {
-  font-size: 0.875rem;
+.ambassador-card-dept {
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: var(--color-text-muted, #64748B);
+  line-height: 1.35;
+  margin-bottom: 0.2rem;
+}
+
+.ambassador-card-org {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #94A3B8;
+  margin-bottom: 1rem;
+}
+
+.ambassador-card-quote {
+  font-size: 0.88rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #334155;
+  line-height: 1.55;
+  padding: 0.75rem 0.5rem;
+  border-top: 1.5px dashed rgba(245, 158, 11, 0.3);
+  border-bottom: 1.5px dashed rgba(245, 158, 11, 0.3);
+  margin: 0 0 1rem 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ambassador-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
   margin-bottom: 1.25rem;
 }
 
-.ambassador-quote {
-  font-size: 1.0625rem;
-  font-style: italic;
-  font-weight: 500;
-  color: var(--color-text-main);
-  line-height: 1.65;
-  padding-left: 1.25rem;
-  border-left: 3.5px solid #F59E0B;
-  margin-bottom: 1.75rem;
+.ambassador-tag-chip {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.1);
+  color: #B45309;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
-.ambassador-socials {
+.ambassador-card-socials {
   display: flex;
   align-items: center;
-  gap: 0.875rem;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: auto;
 }
 
 .social-circle-btn {
@@ -1490,26 +1560,14 @@ button {
     gap: 2.5rem;
   }
 
-  .ambassador-card-colorful {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-    padding: 2rem;
+  .ambassadors-grid {
+    gap: 1.5rem;
   }
 
-  .ambassador-content {
-    text-align: center;
-  }
-
-  .ambassador-quote {
-    border-left: none;
-    padding-left: 0;
-    border-top: 3px solid #F59E0B;
-    padding-top: 1rem;
-  }
-
-  .ambassador-socials {
-    justify-content: center;
+  .ambassador-card-modern {
+    flex: 0 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    min-width: 270px;
   }
 
   .footer-top-grid {
@@ -1562,6 +1620,20 @@ button {
 
   .about-stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ambassadors-grid {
+    gap: 1.25rem;
+  }
+
+  .ambassador-card-modern {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .ambassador-card-body {
+    padding: 0.5rem 1.25rem 1.5rem;
   }
 
   .footer-top-grid {

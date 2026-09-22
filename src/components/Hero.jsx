@@ -19,12 +19,6 @@ export default function Hero() {
       <div className="hero-bg-pattern" aria-hidden="true"></div>
 
       <div className="container hero-content">
-        {/* Colorful Celebration Pill */}
-        <div className="hero-pill-badge">
-          <span className="hero-pill-sparkle">✨</span>
-          <span className="hero-pill-text">Annual Flagship Celebration &bull; October 2026</span>
-          <span className="hero-pill-live">LIVE</span>
-        </div>
 
         {/* Organization Name */}
         <div className="hero-org-badge">
