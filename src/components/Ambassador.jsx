@@ -6,18 +6,15 @@ export default function Ambassador() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Smoothly scroll to a specific card index
+  // Smoothly scroll to a specific card index (one card at a time)
   const scrollToIndex = useCallback((index) => {
     if (!sliderRef.current) return;
     const container = sliderRef.current;
     const cards = container.querySelectorAll('.ambassador-card-spacious');
     if (cards[index]) {
       const card = cards[index];
-      const containerLeft = container.getBoundingClientRect().left;
-      const cardLeft = card.getBoundingClientRect().left;
-      const targetScroll = container.scrollLeft + (cardLeft - containerLeft) - (container.clientWidth - card.clientWidth) / 2;
       container.scrollTo({
-        left: Math.max(0, targetScroll),
+        left: card.offsetLeft,
         behavior: 'smooth'
       });
       setActiveIndex(index);
@@ -38,22 +35,12 @@ export default function Ambassador() {
   const handleScroll = () => {
     if (!sliderRef.current) return;
     const container = sliderRef.current;
-    const cards = container.querySelectorAll('.ambassador-card-spacious');
-    const containerCenter = container.getBoundingClientRect().left + container.clientWidth / 2;
-
-    let closestIdx = 0;
-    let minDistance = Infinity;
-
-    cards.forEach((card, idx) => {
-      const cardCenter = card.getBoundingClientRect().left + card.clientWidth / 2;
-      const distance = Math.abs(containerCenter - cardCenter);
-      if (distance < minDistance) {
-        minDistance = distance;
-        closestIdx = idx;
-      }
-    });
-
-    setActiveIndex(closestIdx);
+    const scrollLeft = container.scrollLeft;
+    const cardWidth = container.clientWidth;
+    if (cardWidth > 0) {
+      const index = Math.round(scrollLeft / cardWidth);
+      setActiveIndex(Math.min(Math.max(0, index), ambassadorsData.length - 1));
+    }
   };
 
   // Auto-move every 5 seconds (5000ms), pausing on hover
@@ -84,7 +71,7 @@ export default function Ambassador() {
           </p>
         </div>
 
-        {/* Horizontal Sliding Ambassador Cards (Spacious Layout) */}
+        {/* Single Featured Card Horizontal Slider */}
         <div 
           className="ambassadors-slider-wrapper"
           onMouseEnter={() => setIsPaused(true)}
@@ -96,13 +83,12 @@ export default function Ambassador() {
             className="ambassadors-slider-track"
             onScroll={handleScroll}
             tabIndex="0"
-            aria-label="Ambassadors horizontal slider"
+            aria-label="Ambassadors showcase slider"
           >
             {ambassadorsData.map((ambassador, index) => (
               <div 
                 key={ambassador.id} 
                 className={`ambassador-card-spacious ${activeIndex === index ? 'ambassador-card-active' : ''}`}
-                onClick={() => scrollToIndex(index)}
               >
                 {/* Top Accent Gradient Bar */}
                 <div className="ambassador-card-bar" aria-hidden="true"></div>
@@ -114,8 +100,8 @@ export default function Ambassador() {
                     src={ambassador.photo} 
                     alt={ambassador.name} 
                     className="ambassador-photo"
-                    width="200"
-                    height="200"
+                    width="230"
+                    height="230"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
@@ -148,7 +134,7 @@ export default function Ambassador() {
                   )}
 
                   {/* Social Links */}
-                  <div className="ambassador-socials" onClick={(e) => e.stopPropagation()}>
+                  <div className="ambassador-socials">
                     <a 
                       href={ambassador.socials.linkedin} 
                       target="_blank" 
