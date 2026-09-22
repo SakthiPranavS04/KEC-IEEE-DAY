@@ -28,43 +28,30 @@ export default function SplashScreen({ onFinish }) {
   return (
     <div 
       id="splash-screen" 
-      className={`splash-fullscreen-stage ${fadeOut ? 'splash-fade-out' : ''}`}
+      className={`splash-fullscreen-viewport ${fadeOut ? 'splash-fade-out' : ''}`}
       role="status"
       aria-label="Loading IEEE Day Celebration"
     >
-      {/* 1. Full-screen ambient atmospheric layer filling entire 100vw x 100vh */}
+      {/* 1. Full-screen Edge-to-Edge Image (No Card, No Borders, Zero Pixel Drop) */}
       <img 
-        src="/assets/ieee-day-splash-hd.png" 
-        alt="" 
-        className="splash-ambient-bg" 
-        aria-hidden="true" 
+        src="/assets/ieee-day-splash-fullscreen.jpg" 
+        alt="IEEE Day - Leveraging Technology for a Better Tomorrow" 
+        className="splash-fullscreen-wallpaper"
+        width="1376"
+        height="768"
       />
 
-      {/* 2. Soft radial lighting scrim */}
-      <div className="splash-stage-scrim" aria-hidden="true"></div>
+      {/* 2. Seamless gradient scrim at bottom to ensure text and progress bar pop */}
+      <div className="splash-bottom-scrim" aria-hidden="true"></div>
 
-      {/* 3. Main Center Stage (Banner + Title + Loader) */}
-      <div className="splash-stage-wrapper">
-        {/* Crisp, Full-Width, Unbroken 3K High-Definition Banner */}
-        <div className="splash-banner-box">
-          <img 
-            src="/assets/ieee-day-splash-hd.png" 
-            alt="IEEE Day - Leveraging Technology for a Better Tomorrow" 
-            className="splash-banner-sharp"
-            width="3072"
-            height="768"
-          />
-        </div>
+      {/* 3. Title & 3-Second Loading Bar (Directly on screen, No Card Frame) */}
+      <div className="splash-bottom-bar">
+        <h1 className="splash-hero-title">IEEE DAY CELEBRATION</h1>
+        <p className="splash-hero-subtitle">KEC IEEE Student Branch</p>
 
-        {/* Title Below Image */}
-        <div className="splash-text-group">
-          <h1 className="splash-fullscreen-title">IEEE DAY CELEBRATION</h1>
-          <p className="splash-fullscreen-subtitle">KEC IEEE Student Branch</p>
-
-          {/* 3-Second Visual Progress Indicator */}
-          <div className="splash-progress-track" aria-hidden="true">
-            <div className="splash-progress-bar"></div>
-          </div>
+        {/* 3-Second Progress Bar */}
+        <div className="splash-progress-track" aria-hidden="true">
+          <div className="splash-progress-bar"></div>
         </div>
       </div>
     </div>
