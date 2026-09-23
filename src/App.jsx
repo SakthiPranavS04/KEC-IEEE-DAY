@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import SplashScreen from './components/SplashScreen.jsx';
 import GlobalNetworkCanvas from './components/GlobalNetworkCanvas.jsx';
+import AnimatedShapes from './components/AnimatedShapes.jsx';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
+import ReadyToJoin from './components/ReadyToJoin.jsx';
 import Countdown from './components/Countdown.jsx';
 import About from './components/About.jsx';
 import Events from './components/Events.jsx';
@@ -18,6 +20,9 @@ export default function App() {
       {/* Dynamic Global Digital Network Canvas Background */}
       <GlobalNetworkCanvas />
 
+      {/* Colorful Gradient Theme + Floating Animated Shapes Background Layer */}
+      <AnimatedShapes />
+
       {/* Futuristic Aurora Ambient Glow Mesh */}
       <div className="aurora-ambient-glow" aria-hidden="true"></div>
 
@@ -32,23 +37,26 @@ export default function App() {
         {/* 2. Hero Section */}
         <Hero />
 
-        {/* 3. Global Event Countdown Section */}
+        {/* 3. Featured Call to Action Section */}
+        <ReadyToJoin />
+
+        {/* 4. Global Event Countdown Section */}
         <Countdown />
 
-        {/* 4. About IEEE Day Section */}
+        {/* 5. About IEEE Day Section */}
         <About />
 
-        {/* 4. Events Section (7 Cards) */}
+        {/* 6. Events Section (7 Cards - IEEE Day '26 Digital Pass Tickets) */}
         <Events />
 
-        {/* 5. Meet Our Ambassador Section */}
+        {/* 7. Meet Our Ambassador Section */}
         <Ambassador />
 
-        {/* 6. Our Societies Section (7 Logos + Continuous Rolling Carousel) */}
+        {/* 8. Our Societies Section (7 Logos + Continuous Rolling Carousel) */}
         <Societies />
       </main>
 
-      {/* 7. Footer / Contact Section */}
+      {/* 9. Footer / Contact Section */}
       <Footer />
     </div>
   );

@@ -162,10 +162,10 @@ export default function Navbar() {
         <a 
           href="#events" 
           className="btn btn-primary" 
-          style={{ width: '100%', marginTop: '0.5rem' }}
+          style={{ width: '100%', marginTop: '0.5rem', justifyContent: 'center' }}
           onClick={(e) => handleNavClick(e, 'events')}
         >
-          Explore All Events
+          Register for IEEE Day 2026
         </a>
       </nav>
     </header>

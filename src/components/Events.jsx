@@ -1,37 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import EventCard from './EventCard.jsx';
+import EventModal from './EventModal.jsx';
 import { events } from '../data/events.js';
 
 export default function Events() {
-  const firstSixEvents = events.slice(0, 6);
-  const seventhEvent = events[6];
+  const [selectedEvent, setSelectedEvent] = useState(null);
+
+  const handleOpenEvent = (event) => {
+    setSelectedEvent(event);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedEvent(null);
+  };
 
   return (
     <section id="events" className="events-section">
       <div className="container">
-        {/* Section Header */}
+        {/* Section Header (Preserved) */}
         <div className="section-header">
           <span className="section-tag">Celebration Lineup</span>
           <h2 className="section-title">Events</h2>
           <p className="section-subtitle">
-            Explore our exciting events and be part of the IEEE Day celebration.
+            Explore our official IEEE Day ’26 events and be part of the celebration.
           </p>
         </div>
 
-        {/* 3 + 3 + 1 Responsive Event Cards Grid */}
-        <div className="events-grid">
-          {firstSixEvents.map((event) => (
-            <EventCard key={event.id} event={event} />
+        {/* 7 Events Grid (Desktop: 3 per row, Tablet: 2 per row, Mobile: 1 per row) */}
+        <div className="ticket-events-grid">
+          {events.map((event) => (
+            <EventCard 
+              key={event.id} 
+              event={event} 
+              onSelect={handleOpenEvent} 
+            />
           ))}
-
-          {/* 7th Event Card: Centered on Desktop (3+3+1 requirement) */}
-          {seventhEvent && (
-            <div className="events-card-wrapper-featured">
-              <EventCard event={seventhEvent} />
-            </div>
-          )}
         </div>
       </div>
+
+      {/* Lightweight Event Details Modal */}
+      {selectedEvent && (
+        <EventModal 
+          event={selectedEvent} 
+          onClose={handleCloseModal} 
+        />
+      )}
     </section>
   );
 }
