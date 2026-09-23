@@ -2035,20 +2035,31 @@ button {
   position: relative;
   max-width: 960px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .ambassadors-slider-track {
   display: flex;
-  overflow-x: hidden;
+  overflow-x: auto;
+  overflow-y: hidden !important;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.ambassadors-slider-track::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .ambassador-card-spacious {
   flex: 0 0 100%;
   width: 100%;
   min-width: 100%;
+  box-sizing: border-box;
   scroll-snap-align: start;
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -2060,8 +2071,17 @@ button {
   padding: 2.75rem 2.5rem;
   box-shadow: var(--shadow-lg);
   position: relative;
-  overflow: hidden;
+  overflow: hidden !important;
+  overflow-y: hidden !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
   transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.ambassador-card-spacious::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 .ambassador-card-spacious:hover {

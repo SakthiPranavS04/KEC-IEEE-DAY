@@ -46,6 +46,34 @@ export const ambassadorsData = [
     quote: "Leveraging technology for a better tomorrow, fostering inclusive collaboration and student engineering excellence.",
     bio: "Driving web engineering, member experience, and inter-college student networking initiatives for IEEE celebrations.",
     tags: ["Web Architecture", "Community", "IEEE Day '26"]
+  },
+  {
+    id: 4,
+    name: "Sutharshan",
+    role: "Events & Web Coordinator Ambassador",
+    tagline: "Student Ambassador & Coordinator",
+    badge: "Student Ambassador",
+    department: "Dept. of Electronics & Communication",
+    organization: "KONGU ENGINEERING COLLEGE",
+    college: "Kongu Engineering College",
+    photo: "/assets/ambassador/sutharshan.jpg",
+    quote: "Fostering collaboration, technical excellence, and impactful engineering opportunities on IEEE Day.",
+    bio: "Coordinating student outreach, technical contests, and web competitions to empower student developers.",
+    tags: ["Event Coordination", "Networking", "Web Technologies"]
+  },
+  {
+    id: 5,
+    name: "Srinithi",
+    role: "Technical & Student Activities Ambassador",
+    tagline: "Student Ambassador & Coordinator",
+    badge: "Student Ambassador",
+    department: "Dept. of Electrical & Electronics",
+    organization: "KONGU ENGINEERING COLLEGE",
+    college: "Kongu Engineering College",
+    photo: "/assets/ambassador/srinithi.jpg",
+    quote: "Inspiring future engineers to innovate, solve complex challenges, and excel in the global IEEE community.",
+    bio: "Organizing student branch debug contests, symposiums, and promoting technical leadership across disciplines.",
+    tags: ["Technical Leadership", "Student Engagement", "Circuit Debugging"]
   }
 ];
 

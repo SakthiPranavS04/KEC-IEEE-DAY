@@ -81,7 +81,6 @@ export default function Ambassador() {
             ref={sliderRef}
             className="ambassadors-slider-track"
             onScroll={handleScroll}
-            tabIndex="0"
             aria-label="Ambassadors showcase slider"
           >
             {ambassadorsData.map((ambassador, index) => (
