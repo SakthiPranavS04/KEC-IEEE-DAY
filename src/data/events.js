@@ -1,6 +1,7 @@
 // ============================================================
 // KONGU ENGINEERING COLLEGE - IEEE Day '26 Events Data
 // Official Lineup: 28 September 2026
+// Exact Google Form registration links per official event
 // ============================================================
 
 export const eventGlobalInfo = {
@@ -29,6 +30,8 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
+    // [Mini Hackathon]
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfBX7NUFZ4_EfqkpvPMx0ui6J3-nnBi7TkIGI07QjbIi7YMdw/viewform",
     contacts: [
       { name: "Sharvesh A Y", phone: "9361191110" },
       { name: "Divyadharshini V", phone: "93425 65992" },
@@ -57,6 +60,8 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
+    // [Poster]
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeIxddsugT6WJozxMTJzvfU9ET2nVusDLcDeRJH-TdV62UGdg/viewform",
     contacts: [
       { name: "Srinithi", phone: "8122858146" },
       { name: "Gurutharshini N", phone: "81484 03927" },
@@ -85,6 +90,8 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
+    // [Code relay]
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeJDSnsAWqUXRereipA6ExOJ_PrpahA-y7aM5mkQex0dJv-rw/viewform",
     contacts: [
       { name: "Sutharshan T", phone: "80721 09886" },
       { name: "Jayanivash P", phone: "94422 49452" },
@@ -113,6 +120,8 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
+    // Not provided in list - left null so only exact links are attached
+    formUrl: null,
     contacts: [
       { name: "Srinithi M", phone: "8122858146" },
       { name: "Lavanya J", phone: "78679 73047" },
@@ -141,6 +150,8 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
+    // [Circuit Quest]
+    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSezhZx4P0jM8dZTU0n1j9Vf0BPKVUgQBmmaeEsYJJyNY8Kaag/viewform",
     contacts: [
       { name: "Srinithi M", phone: "8122858146" },
       { name: "Rajaganesh A", phone: "80153 02819" },
@@ -169,6 +180,8 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
+    // [Project]
+    formUrl: "https://forms.gle/Apd8pXZwW4oYY5N88",
     contacts: [
       { name: "Vishal G", phone: "8778255251" },
       { name: "Sridhar R", phone: "9524027027" },
@@ -197,6 +210,8 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
+    // [Paper Presentation]
+    formUrl: "https://forms.gle/1Dvf1b5u9MpA5U2f7",
     contacts: [
       { name: "Srinithi", phone: "8122858146" },
       { name: "Abinaya S", phone: "6382157941" },

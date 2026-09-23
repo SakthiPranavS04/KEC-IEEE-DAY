@@ -166,15 +166,33 @@ export default function EventModal({ event, onClose }) {
               </div>
             )}
 
-            {/* Modal Bottom Action Button */}
+            {/* Modal Bottom Action Bar with Register Now Button */}
             <div className="event-modal-action-bar">
               <button 
                 type="button" 
                 className="btn-modal-close" 
                 onClick={onClose}
               >
-                Close Details
+                Close
               </button>
+
+              {event.formUrl ? (
+                <a 
+                  href={event.formUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn-modal-register"
+                  id={`modal-register-btn-${event.id}`}
+                >
+                  <span>REGISTER NOW</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              ) : (
+                <span className="modal-coming-soon-note">Registration Opening Soon</span>
+              )}
             </div>
           </div>
         </div>
