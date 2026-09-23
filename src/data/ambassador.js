@@ -7,26 +7,21 @@
 export const ambassadorsData = [
   {
     id: 1,
-    name: "Swetha R.",
+    name: "Barath M D",
     role: "Lead IEEE Day Ambassador",
-    tagline: "Student Chair & Ambassador",
+    tagline: "Student Ambassador & Organizer",
     badge: "Lead Ambassador",
     department: "Dept. of Computer Science & Engineering",
     organization: "KONGU ENGINEERING COLLEGE",
     college: "Kongu Engineering College",
     photo: "/assets/ambassador/ambassador.jpg",
     quote: "Connecting minds and igniting innovation — celebrating the spirit of global engineering collaboration on IEEE Day.",
-    bio: "Passionate about driving technological innovation and student leadership. Spearheading flagship IEEE Day events and cross-departmental technical initiatives.",
-    tags: ["Leadership", "Global Outreach", "AI & Innovation"],
-    socials: {
-      linkedin: "https://www.linkedin.com/school/kongu-engineering-college/",
-      email: "mailto:ieeesb@kongu.edu",
-      instagram: "https://www.instagram.com/kec_ieee/"
-    }
+    bio: "Passionate about driving technological innovation, student leadership, and spearheading flagship IEEE Day events and cross-departmental technical initiatives.",
+    tags: ["Leadership", "Global Outreach", "AI & Innovation"]
   },
   {
     id: 2,
-    name: "Karthik Raja M.",
+    name: "Vishal G",
     role: "Technical Activities Ambassador",
     tagline: "Technical Coordinator",
     badge: "Technical Lead",
@@ -36,69 +31,21 @@ export const ambassadorsData = [
     photo: "/assets/ambassador/ambassador-2.jpg",
     quote: "Empowering students through hands-on technical hackathons, embedded systems workshops, and competitive development.",
     bio: "Dedicated to organizing high-impact technical symposiums, coding challenges, and hardware design hackathons across disciplines.",
-    tags: ["IoT & Robotics", "Hackathons", "Tech Mentorship"],
-    socials: {
-      linkedin: "https://www.linkedin.com/school/kongu-engineering-college/",
-      email: "mailto:ieeesb@kongu.edu",
-      instagram: "https://www.instagram.com/kec_ieee/"
-    }
+    tags: ["IoT & Robotics", "Hackathons", "Tech Mentorship"]
   },
   {
     id: 3,
-    name: "Pooja V.",
-    role: "WIE Affinity Ambassador",
-    tagline: "Women in Engineering Lead",
-    badge: "WIE Ambassador",
-    department: "Dept. of Electrical & Electronics",
-    organization: "KONGU ENGINEERING COLLEGE",
-    college: "Kongu Engineering College",
-    photo: "/assets/ambassador/ambassador-3.jpg",
-    quote: "Inspiring and championing women in STEM, fostering inclusive spaces for tomorrow's technology leaders.",
-    bio: "Active advocate for diversity in engineering, mentoring junior students, and spearheading WIE networking and panel sessions.",
-    tags: ["Women in STEM", "Community", "Empowerment"],
-    socials: {
-      linkedin: "https://www.linkedin.com/school/kongu-engineering-college/",
-      email: "mailto:ieeesb@kongu.edu",
-      instagram: "https://www.instagram.com/kec_ieee/"
-    }
-  },
-  {
-    id: 4,
-    name: "Arunachalam S.",
-    role: "Outreach & PR Ambassador",
-    tagline: "Public Relations Coordinator",
-    badge: "Outreach & PR",
+    name: "Sakthi Pranav S",
+    role: "IEEE Student Branch Ambassador",
+    tagline: "Ambassador & Web Coordinator",
+    badge: "Branch Ambassador",
     department: "Dept. of Information Technology",
     organization: "KONGU ENGINEERING COLLEGE",
     college: "Kongu Engineering College",
-    photo: "/assets/ambassador/ambassador-4.jpg",
-    quote: "Amplifying IEEE Day's spirit across universities, driving collaborative synergy and student participation.",
-    bio: "Managing institutional partnerships, brand outreach, and inter-college student networking initiatives for IEEE celebrations.",
-    tags: ["Public Relations", "Networking", "Media Design"],
-    socials: {
-      linkedin: "https://www.linkedin.com/school/kongu-engineering-college/",
-      email: "mailto:ieeesb@kongu.edu",
-      instagram: "https://www.instagram.com/kec_ieee/"
-    }
-  },
-  {
-    id: 5,
-    name: "Deepika N.",
-    role: "Membership Ambassador",
-    tagline: "Member Experience Lead",
-    badge: "Membership Lead",
-    department: "Dept. of Mechatronics Engineering",
-    organization: "KONGU ENGINEERING COLLEGE",
-    college: "Kongu Engineering College",
-    photo: "/assets/ambassador/ambassador-5.jpg",
-    quote: "Welcoming new talents to the IEEE family and helping students unlock global career and research benefits.",
-    bio: "Passionate about student onboarding, career advancement workshops, and connecting aspiring engineers with IEEE digital libraries.",
-    tags: ["Member Benefits", "Student Growth", "Career Dev"],
-    socials: {
-      linkedin: "https://www.linkedin.com/school/kongu-engineering-college/",
-      email: "mailto:ieeesb@kongu.edu",
-      instagram: "https://www.instagram.com/kec_ieee/"
-    }
+    photo: "/assets/ambassador/ambassador-3.jpg",
+    quote: "Leveraging technology for a better tomorrow, fostering inclusive collaboration and student engineering excellence.",
+    bio: "Driving web engineering, member experience, and inter-college student networking initiatives for IEEE celebrations.",
+    tags: ["Web Architecture", "Community", "IEEE Day '26"]
   }
 ];
 

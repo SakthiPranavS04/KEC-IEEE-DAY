@@ -1081,7 +1081,14 @@ button {
   font-size: 1.1rem;
   color: #475569;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.about-extended-text {
+  font-size: 1rem;
+  color: #64748B;
+  line-height: 1.7;
+  margin-bottom: 0;
 }
 
 .about-quick-cards {
@@ -1280,6 +1287,24 @@ button {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   align-items: stretch;
+}
+
+/* Center the 7th event card in desktop 3-column layout */
+@media (min-width: 1025px) {
+  .ticket-events-grid > :nth-child(7):last-child {
+    grid-column: 2;
+  }
+}
+
+/* Center the 7th event card in tablet 2-column layout */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ticket-events-grid > :nth-child(7):last-child {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 0.75rem);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
 }
 
 .ticket-pass-card {
@@ -2379,20 +2404,47 @@ button {
 .footer-logo-row {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.875rem;
   margin-bottom: 1.25rem;
 }
 
 .footer-ieee-logo {
-  height: 34px;
+  height: 32px;
   width: auto;
+  object-fit: contain;
 }
 
-.footer-org-name {
-  font-size: 1.125rem;
+.footer-ieee-day-logo {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-brand-divider {
+  width: 1.5px;
+  height: 30px;
+  background: linear-gradient(180deg, #2563EB, #EC4899);
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand-name {
+  font-size: 1.0625rem;
   font-weight: 800;
   color: var(--color-text-dark);
+  line-height: 1.2;
   letter-spacing: 0.02em;
+}
+
+.footer-brand-sub {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2563EB;
+  letter-spacing: 0.08em;
 }
 
 .footer-tagline {

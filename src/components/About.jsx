@@ -15,7 +15,7 @@ export default function About() {
         </div>
 
         <div className="about-grid">
-          {/* Left Column: Information & Pillars */}
+          {/* Left Column: Narrative & Mission */}
           <div className="about-left">
             <h3 className="about-subtitle">
               Commemorating Global Engineering Excellence Since 1884
@@ -25,7 +25,13 @@ export default function About() {
               IEEE Day commemorates the historic 1884 meeting where engineers worldwide first united to share technical knowledge and leverage technology for humanity.
             </p>
 
-            {/* 3 Feature Cards with Clean Outline SVG Icons */}
+            <p className="about-extended-text">
+              At Kongu Engineering College, the IEEE Student Branch upholds this worldwide tradition of technical excellence, ethical leadership, and collaborative learning. Our celebrations bring together aspiring engineers across diverse domains to create impactful solutions that shape tomorrow.
+            </p>
+          </div>
+
+          {/* Right Column: 3 Feature Cards (Innovation, Collaboration, Technology) */}
+          <div className="about-right">
             <div className="about-quick-cards">
               <div className="quick-card quick-card-blue">
                 <div className="quick-card-icon">
@@ -69,44 +75,6 @@ export default function About() {
                   <h4>Technology</h4>
                   <p>Hands-on coding, hardware labs, and multidisciplinary skills.</p>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Clean Elevated Stat Card */}
-          <div className="about-right">
-            <div className="about-card-vibrant">
-              <div className="about-vibrant-header">
-                <span className="badge-madras">IEEE Madras Section</span>
-                <span className="badge-code">STB29741</span>
-              </div>
-
-              <h3 className="about-card-title">KONGU ENGINEERING COLLEGE</h3>
-
-              <div className="about-stats-grid">
-                <div className="about-stat-box stat-gradient-emerald">
-                  <div className="about-stat-number">400K+</div>
-                  <div className="about-stat-label">Global Members</div>
-                </div>
-
-                <div className="about-stat-box stat-gradient-amber">
-                  <div className="about-stat-number">160+</div>
-                  <div className="about-stat-label">Countries</div>
-                </div>
-
-                <div className="about-stat-box stat-gradient-rose">
-                  <div className="about-stat-number">1884</div>
-                  <div className="about-stat-label">Legacy Year</div>
-                </div>
-              </div>
-
-              <div className="about-card-footer">
-                <img 
-                  src="/assets/logos/ieee-master.svg" 
-                  alt="IEEE Logo" 
-                  style={{ height: '32px', width: 'auto' }} 
-                />
-                <span className="about-college-text">Kongu Engineering College, Perundurai</span>
               </div>
             </div>
           </div>

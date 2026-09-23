@@ -21,10 +21,21 @@ export default function Footer() {
                 src="/assets/logos/ieee-master.svg" 
                 alt="IEEE Logo" 
                 className="footer-ieee-logo"
-                width="84"
-                height="32"
+                width="82"
+                height="30"
               />
-              <div className="footer-org-name">KONGU ENGINEERING COLLEGE</div>
+              <img 
+                src="/assets/logos/ieee-day-logo.png" 
+                alt="IEEE Day Logo" 
+                className="footer-ieee-day-logo" 
+                width="34" 
+                height="34"
+              />
+              <div className="footer-brand-divider" aria-hidden="true"></div>
+              <div className="footer-brand-text">
+                <span className="footer-brand-name">IEEE STUDENT BRANCH</span>
+                <span className="footer-brand-sub">KONGU ENGINEERING COLLEGE</span>
+              </div>
             </div>
 
             <p className="footer-tagline">

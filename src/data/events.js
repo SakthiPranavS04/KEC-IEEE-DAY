@@ -117,7 +117,7 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
-    formUrl: null,
+    formUrl: "https://forms.gle/mR6Xj2seaG4C5sZC6",
     contacts: [
       { name: "Srinithi M", phone: "8122858146" },
       { name: "Lavanya J", phone: "78679 73047" },
