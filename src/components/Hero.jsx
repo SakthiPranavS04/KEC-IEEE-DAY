@@ -22,27 +22,49 @@ export default function Hero() {
 
       <div className="container hero-content">
 
-        {/* Organization Name */}
+        {/* Organization Name & Prestige Badge */}
         <div className="hero-org-badge">
           <span className="hero-org-dot"></span>
-          <span>KONGU ENGINEERING COLLEGE</span>
+          <span>KEC IEEE Student Branch &bull; Kongu Engineering College</span>
         </div>
 
-        {/* Main Title with Radiant Gradient */}
+        {/* Conference Label */}
+        <div className="hero-flagship-pill">
+          ANNUAL GLOBAL CELEBRATION &bull; 06 OCTOBER 2026
+        </div>
+
+        {/* Huge Conference Title */}
         <h1 className="hero-main-title">
-          IEEE Day <span className="gradient-text-celebration">Celebration</span>
+          IEEE DAY <span className="hero-year-highlight">2026</span>
         </h1>
 
-        {/* Short, direct description as required */}
-        <p className="hero-lead-punchy">
-          Join us in celebrating IEEE Day — a celebration of innovation, collaboration, technology and the global IEEE community.
+        {/* Theme Motto */}
+        <p className="hero-theme-motto">
+          &ldquo;Leveraging Technology for a Better Tomorrow&rdquo;
         </p>
 
-        {/* Vibrant Action Button */}
+        {/* Short, direct description */}
+        <p className="hero-lead-punchy">
+          Join us at Kongu Engineering College in celebrating IEEE Day — an international celebration of innovation, collaboration, and the global IEEE community.
+        </p>
+
+        {/* Conference Action Buttons */}
         <div className="hero-actions">
           <a 
             href="#events" 
-            className="btn btn-gradient-glow"
+            className="btn btn-primary-conference"
+            onClick={(e) => scrollToSection(e, 'events')}
+          >
+            <span>Explore Events</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </a>
+
+          <a 
+            href="#events" 
+            className="btn btn-secondary-conference"
             onClick={(e) => scrollToSection(e, 'events')}
           >
             <span>Register Now</span>

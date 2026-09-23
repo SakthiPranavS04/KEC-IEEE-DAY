@@ -85,8 +85,8 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#events" className="nav-link nav-cta" onClick={(e) => handleNavClick(e, 'events')}>
-                Register Now
+              <a href="#events" className="btn-nav-register" onClick={(e) => handleNavClick(e, 'events')}>
+                Register Now &rarr;
               </a>
             </li>
           </ul>

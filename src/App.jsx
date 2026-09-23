@@ -3,6 +3,7 @@ import SplashScreen from './components/SplashScreen.jsx';
 import GlobalNetworkCanvas from './components/GlobalNetworkCanvas.jsx';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
+import Countdown from './components/Countdown.jsx';
 import About from './components/About.jsx';
 import Events from './components/Events.jsx';
 import Ambassador from './components/Ambassador.jsx';
@@ -31,7 +32,10 @@ export default function App() {
         {/* 2. Hero Section */}
         <Hero />
 
-        {/* 3. About IEEE Day Section */}
+        {/* 3. Global Event Countdown Section */}
+        <Countdown />
+
+        {/* 4. About IEEE Day Section */}
         <About />
 
         {/* 4. Events Section (7 Cards) */}
