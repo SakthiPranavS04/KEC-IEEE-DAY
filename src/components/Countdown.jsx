@@ -47,7 +47,6 @@ export default function Countdown() {
         <div className="countdown-wrapper">
           {/* Header Message */}
           <div className="countdown-header">
-            <span className="countdown-tag">GLOBAL EVENT COUNTDOWN</span>
             <h2 className="countdown-title">The Celebration Begins Soon</h2>
             <p className="countdown-subtitle">
               Join thousands of engineers, researchers, and innovators celebrating IEEE Day worldwide on <strong>28 September 2026 at 9:00 AM</strong>.

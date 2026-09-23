@@ -40,8 +40,8 @@ export default function GlobalNetworkCanvas() {
       canvas.style.height = `${height}px`;
       ctx.scale(dpr, dpr);
 
-      // Mobile: fewer particles (~22), Desktop: ~48
-      const particleCount = width < 768 ? 22 : 48;
+      // Mobile: ~32 particles, Desktop: ~60
+      const particleCount = width < 768 ? 32 : 60;
       initParticles(particleCount);
     };
 
@@ -65,7 +65,7 @@ export default function GlobalNetworkCanvas() {
       ctx.clearRect(0, 0, width, height);
 
       // Max connection distance
-      const maxDist = width < 768 ? 95 : 135;
+      const maxDist = width < 768 ? 110 : 155;
 
       // Draw connection lines between nearby particles in animated blue
       for (let i = 0; i < particles.length; i++) {

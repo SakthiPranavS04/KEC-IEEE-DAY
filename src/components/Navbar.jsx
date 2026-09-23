@@ -35,19 +35,26 @@ export default function Navbar() {
           href="#home" 
           className="navbar-brand" 
           onClick={(e) => handleNavClick(e, 'home')}
-          aria-label="KONGU ENGINEERING COLLEGE Home"
+          aria-label="IEEE Student Branch Kongu Engineering College Home"
         >
           <img 
             src="/assets/logos/ieee-master.svg" 
             alt="IEEE Logo" 
             className="navbar-logo-img" 
-            width="90" 
+            width="82" 
+            height="30"
+          />
+          <img 
+            src="/assets/logos/ieee-day-logo.png" 
+            alt="IEEE Day Logo" 
+            className="navbar-ieee-day-logo" 
+            width="34" 
             height="34"
           />
           <div className="navbar-brand-divider" aria-hidden="true"></div>
           <div className="navbar-brand-text">
-            <span className="navbar-brand-name">KONGU ENGINEERING COLLEGE</span>
-            <span className="navbar-brand-sub">Perundurai, Erode</span>
+            <span className="navbar-brand-name">IEEE STUDENT BRANCH</span>
+            <span className="navbar-brand-sub">KONGU ENGINEERING COLLEGE</span>
           </div>
         </a>
 

@@ -6,7 +6,6 @@ export default function About() {
       <div className="container">
         {/* Centered Section Name & Header */}
         <div className="section-header">
-          <span className="section-tag">GLOBAL HERITAGE</span>
           <h2 className="section-title">
             About <span className="gradient-text-rainbow">IEEE Day</span>
           </h2>

@@ -19,7 +19,6 @@ export default function Events() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-tag">Celebration Lineup</span>
           <h2 className="section-title">
             Official <span className="gradient-text-rainbow">Events</span>
           </h2>

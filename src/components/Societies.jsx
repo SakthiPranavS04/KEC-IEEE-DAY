@@ -7,7 +7,6 @@ export default function Societies() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-tag">Technical Societies</span>
           <h2 className="section-title">
             Our <span className="gradient-text-rainbow">Societies</span>
           </h2>

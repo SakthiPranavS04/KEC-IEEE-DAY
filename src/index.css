@@ -461,9 +461,16 @@ button {
 }
 
 .navbar-logo-img {
-  height: 38px;
+  height: 36px;
   width: auto;
   object-fit: contain;
+}
+
+.navbar-ieee-day-logo {
+  height: 34px;
+  width: 34px;
+  object-fit: contain;
+  margin-left: 0.1rem;
 }
 
 .navbar-brand-divider {
@@ -718,39 +725,26 @@ button {
   z-index: 2;
 }
 
-/* Organization Prestige Badge */
-.hero-org-badge {
+/* Official IEEE Day Logo Emblem at Top of Page */
+.hero-ieee-day-logo-wrap {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
-  padding: 0.45rem 1.35rem;
-  background: rgba(37, 99, 235, 0.08);
-  border: 1px solid rgba(37, 99, 235, 0.22);
-  border-radius: var(--radius-full);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  color: #2563EB;
-  margin-bottom: 1rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  position: relative;
 }
 
-.hero-org-dot {
-  width: 8px;
-  height: 8px;
-  background: #2563EB;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #2563EB;
+.hero-ieee-day-logo {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(37, 99, 235, 0.22));
+  animation: logoPulseFloat 4s ease-in-out infinite alternate;
 }
 
-/* Conference Flagship Label */
-.hero-flagship-pill {
-  font-size: 0.875rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  color: #64748B;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
+@keyframes logoPulseFloat {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-7px) scale(1.04); }
 }
 
 /* Huge Conference Heading: IEEE DAY 2026 */
@@ -950,7 +944,7 @@ button {
 .countdown-section {
   position: relative;
   padding: 4.5rem 0;
-  background-color: var(--color-bg-subtle);
+  background-color: transparent;
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
   z-index: 2;
@@ -1061,7 +1055,7 @@ button {
 .about-section {
   position: relative;
   padding: 6.5rem 0 6rem 0;
-  background-color: var(--color-bg-page);
+  background-color: transparent;
   border-bottom: 1px solid var(--color-border-light);
   z-index: 2;
 }
@@ -1276,7 +1270,7 @@ button {
 .events-section {
   position: relative;
   padding: 6.5rem 0 6rem 0;
-  background-color: var(--color-bg-subtle);
+  background-color: transparent;
   border-bottom: 1px solid var(--color-border-light);
   z-index: 2;
 }
@@ -2005,7 +1999,7 @@ button {
 .ambassador-section {
   position: relative;
   padding: 6.5rem 0 6rem 0;
-  background-color: var(--color-bg-page);
+  background-color: transparent;
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
   overflow: hidden;
@@ -2254,7 +2248,7 @@ button {
 .societies-section {
   position: relative;
   padding: 6.5rem 0 6rem 0;
-  background-color: var(--color-bg-subtle);
+  background-color: transparent;
   border-bottom: 1px solid var(--color-border-light);
   z-index: 2;
 }
@@ -2279,12 +2273,12 @@ button {
 
 .carousel-outer-wrapper::before {
   left: 0;
-  background: linear-gradient(to right, var(--color-bg-subtle), transparent);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), transparent);
 }
 
 .carousel-outer-wrapper::after {
   right: 0;
-  background: linear-gradient(to left, var(--color-bg-subtle), transparent);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.95), transparent);
 }
 
 .carousel-track {
@@ -2367,7 +2361,7 @@ button {
    ============================================================ */
 .footer-contact-section {
   position: relative;
-  background-color: var(--color-bg-page);
+  background-color: transparent;
   color: #475569;
   border-top: 1px solid var(--color-border-light);
   padding: 5rem 0 2rem 0;

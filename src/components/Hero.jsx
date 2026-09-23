@@ -22,15 +22,15 @@ export default function Hero() {
 
       <div className="container hero-content">
 
-        {/* Organization Name & Prestige Badge */}
-        <div className="hero-org-badge">
-          <span className="hero-org-dot"></span>
-          <span>KEC IEEE Student Branch &bull; Kongu Engineering College</span>
-        </div>
-
-        {/* Conference Label */}
-        <div className="hero-flagship-pill">
-          ANNUAL GLOBAL CELEBRATION &bull; 28 SEPTEMBER 2026
+        {/* Official IEEE Day Logo at Top */}
+        <div className="hero-ieee-day-logo-wrap">
+          <img 
+            src="/assets/logos/ieee-day-logo.png" 
+            alt="Official IEEE Day 2026 Logo" 
+            className="hero-ieee-day-logo"
+            width="100"
+            height="100"
+          />
         </div>
 
         {/* Huge Conference Title */}
