@@ -1,5 +1,5 @@
 // ============================================================
-// KEC IEEE Student Branch - IEEE Day Celebration
+// KONGU ENGINEERING COLLEGE - IEEE Day Celebration
 // Event Data Configuration
 // Short, punchy descriptions and individual vibrant color themes
 // ============================================================

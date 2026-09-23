@@ -23,7 +23,7 @@ export default function Hero() {
         {/* Organization Name */}
         <div className="hero-org-badge">
           <span className="hero-org-dot"></span>
-          <span>KEC IEEE Student Branch</span>
+          <span>KONGU ENGINEERING COLLEGE</span>
         </div>
 
         {/* Main Title with Radiant Gradient */}

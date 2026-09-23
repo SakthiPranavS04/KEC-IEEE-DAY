@@ -24,7 +24,7 @@ export default function Footer() {
                 width="84"
                 height="32"
               />
-              <div className="footer-org-name">KEC IEEE Student Branch</div>
+              <div className="footer-org-name">KONGU ENGINEERING COLLEGE</div>
             </div>
 
             <p className="footer-tagline">
@@ -156,7 +156,7 @@ export default function Footer() {
         {/* Bottom Bar & Copyright */}
         <div className="footer-bottom-bar">
           <div className="footer-copyright">
-            &copy; 2026 KEC IEEE Student Branch, Kongu Engineering College. All Rights Reserved.
+            &copy; 2026 KONGU ENGINEERING COLLEGE. All Rights Reserved.
           </div>
 
           <button 

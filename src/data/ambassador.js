@@ -1,7 +1,7 @@
 // ============================================================
-// KEC IEEE Student Branch - IEEE Day Celebration
+// KONGU ENGINEERING COLLEGE - IEEE Day Celebration
 // Ambassadors Data Configuration
-// 5 Dedicated Ambassadors representing KEC IEEE Student Branch
+// 5 Dedicated Ambassadors representing KONGU ENGINEERING COLLEGE
 // ============================================================
 
 export const ambassadorsData = [
@@ -12,7 +12,7 @@ export const ambassadorsData = [
     tagline: "Student Chair & Ambassador",
     badge: "Lead Ambassador",
     department: "Dept. of Computer Science & Engineering",
-    organization: "KEC IEEE Student Branch",
+    organization: "KONGU ENGINEERING COLLEGE",
     college: "Kongu Engineering College",
     photo: "/assets/ambassador/ambassador.jpg",
     quote: "Connecting minds and igniting innovation — celebrating the spirit of global engineering collaboration on IEEE Day.",
@@ -31,7 +31,7 @@ export const ambassadorsData = [
     tagline: "Technical Coordinator",
     badge: "Technical Lead",
     department: "Dept. of Electronics & Communication",
-    organization: "KEC IEEE Student Branch",
+    organization: "KONGU ENGINEERING COLLEGE",
     college: "Kongu Engineering College",
     photo: "/assets/ambassador/ambassador-2.jpg",
     quote: "Empowering students through hands-on technical hackathons, embedded systems workshops, and competitive development.",
@@ -50,7 +50,7 @@ export const ambassadorsData = [
     tagline: "Women in Engineering Lead",
     badge: "WIE Ambassador",
     department: "Dept. of Electrical & Electronics",
-    organization: "KEC IEEE Student Branch",
+    organization: "KONGU ENGINEERING COLLEGE",
     college: "Kongu Engineering College",
     photo: "/assets/ambassador/ambassador-3.jpg",
     quote: "Inspiring and championing women in STEM, fostering inclusive spaces for tomorrow's technology leaders.",
@@ -69,7 +69,7 @@ export const ambassadorsData = [
     tagline: "Public Relations Coordinator",
     badge: "Outreach & PR",
     department: "Dept. of Information Technology",
-    organization: "KEC IEEE Student Branch",
+    organization: "KONGU ENGINEERING COLLEGE",
     college: "Kongu Engineering College",
     photo: "/assets/ambassador/ambassador-4.jpg",
     quote: "Amplifying IEEE Day's spirit across universities, driving collaborative synergy and student participation.",
@@ -88,7 +88,7 @@ export const ambassadorsData = [
     tagline: "Member Experience Lead",
     badge: "Membership Lead",
     department: "Dept. of Mechatronics Engineering",
-    organization: "KEC IEEE Student Branch",
+    organization: "KONGU ENGINEERING COLLEGE",
     college: "Kongu Engineering College",
     photo: "/assets/ambassador/ambassador-5.jpg",
     quote: "Welcoming new talents to the IEEE family and helping students unlock global career and research benefits.",

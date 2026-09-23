@@ -1,5 +1,5 @@
 // ============================================================
-// KEC IEEE Student Branch - IEEE Day Celebration
+// KONGU ENGINEERING COLLEGE - IEEE Day Celebration
 // Society Chapters Data Configuration
 // Each society has its individual official logo and details
 // ============================================================

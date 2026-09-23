@@ -52,7 +52,7 @@ export default function About() {
                 <span className="badge-code">STB29741</span>
               </div>
 
-              <h3 className="about-card-title">KEC IEEE Student Branch</h3>
+              <h3 className="about-card-title">KONGU ENGINEERING COLLEGE</h3>
 
               <div className="about-stats-grid">
                 <div className="about-stat-box stat-gradient-cyan">

@@ -35,7 +35,7 @@ export default function Navbar() {
           href="#home" 
           className="navbar-brand" 
           onClick={(e) => handleNavClick(e, 'home')}
-          aria-label="KEC IEEE Student Branch Home"
+          aria-label="KONGU ENGINEERING COLLEGE Home"
         >
           <img 
             src="/assets/logos/ieee-master.svg" 
@@ -46,8 +46,8 @@ export default function Navbar() {
           />
           <div className="navbar-brand-divider" aria-hidden="true"></div>
           <div className="navbar-brand-text">
-            <span className="navbar-brand-name">KEC IEEE Student Branch</span>
-            <span className="navbar-brand-sub">Kongu Engineering College</span>
+            <span className="navbar-brand-name">KONGU ENGINEERING COLLEGE</span>
+            <span className="navbar-brand-sub">Perundurai, Erode</span>
           </div>
         </a>
 
