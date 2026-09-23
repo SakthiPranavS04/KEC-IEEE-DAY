@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 /**
  * Countdown Component
  * Displays live countdown to 06 October 2026 for the IEEE Day Celebration.
- * Styled in dark translucent blue conference cards with subtle glow.
+ * Visually impressive gradient section (Purple → Blue → Cyan) with glassmorphism cards.
  */
 export default function Countdown() {
   const [timeLeft, setTimeLeft] = useState({
@@ -43,40 +43,55 @@ export default function Countdown() {
 
   return (
     <section id="countdown" className="countdown-section" aria-label="Conference Countdown">
+      {/* Background Animated Gradient Mesh Glow */}
+      <div className="countdown-bg-mesh" aria-hidden="true">
+        <div className="countdown-orb-purple"></div>
+        <div className="countdown-orb-blue"></div>
+        <div className="countdown-orb-cyan"></div>
+      </div>
+
       <div className="container">
         <div className="countdown-wrapper">
           {/* Header Message */}
           <div className="countdown-header">
-            <span className="countdown-tag">GLOBAL EVENT COUNTDOWN</span>
-            <h2 className="countdown-title">The Celebration Begins Soon</h2>
+            <span className="countdown-tag-glass">GLOBAL COUNTDOWN</span>
+            <h2 className="countdown-title">THE CELEBRATION BEGINS IN</h2>
             <p className="countdown-subtitle">
               Join thousands of engineers, researchers, and innovators celebrating IEEE Day worldwide on <strong>06 October 2026</strong>.
             </p>
           </div>
 
-          {/* Countdown Grid (Days, Hours, Minutes, Seconds) */}
+          {/* Glassmorphism Countdown Cards Grid */}
           <div className="countdown-grid">
-            <div className="countdown-card">
-              <div className="countdown-number">{formatNumber(timeLeft.days)}</div>
-              <div className="countdown-label">DAYS</div>
+            <div className="countdown-card-glass">
+              <div className="countdown-card-inner">
+                <span className="countdown-number">{formatNumber(timeLeft.days)}</span>
+                <span className="countdown-label">DAYS</span>
+              </div>
               <div className="countdown-card-glow" aria-hidden="true"></div>
             </div>
 
-            <div className="countdown-card">
-              <div className="countdown-number">{formatNumber(timeLeft.hours)}</div>
-              <div className="countdown-label">HOURS</div>
+            <div className="countdown-card-glass">
+              <div className="countdown-card-inner">
+                <span className="countdown-number">{formatNumber(timeLeft.hours)}</span>
+                <span className="countdown-label">HOURS</span>
+              </div>
               <div className="countdown-card-glow" aria-hidden="true"></div>
             </div>
 
-            <div className="countdown-card">
-              <div className="countdown-number">{formatNumber(timeLeft.minutes)}</div>
-              <div className="countdown-label">MINUTES</div>
+            <div className="countdown-card-glass">
+              <div className="countdown-card-inner">
+                <span className="countdown-number">{formatNumber(timeLeft.minutes)}</span>
+                <span className="countdown-label">MINUTES</span>
+              </div>
               <div className="countdown-card-glow" aria-hidden="true"></div>
             </div>
 
-            <div className="countdown-card">
-              <div className="countdown-number">{formatNumber(timeLeft.seconds)}</div>
-              <div className="countdown-label">SECONDS</div>
+            <div className="countdown-card-glass">
+              <div className="countdown-card-inner">
+                <span className="countdown-number">{formatNumber(timeLeft.seconds)}</span>
+                <span className="countdown-label">SECONDS</span>
+              </div>
               <div className="countdown-card-glow" aria-hidden="true"></div>
             </div>
           </div>

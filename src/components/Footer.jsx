@@ -94,8 +94,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#timeline" className="footer-nav-link" onClick={(e) => scrollToSection(e, 'timeline')}>
+                  Heritage Timeline
+                </a>
+              </li>
+              <li>
                 <a href="#events" className="footer-nav-link" onClick={(e) => scrollToSection(e, 'events')}>
                   All Events
+                </a>
+              </li>
+              <li>
+                <a href="#gallery" className="footer-nav-link" onClick={(e) => scrollToSection(e, 'gallery')}>
+                  Photo Gallery
                 </a>
               </li>
               <li>
