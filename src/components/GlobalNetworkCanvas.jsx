@@ -55,8 +55,8 @@ export default function GlobalNetworkCanvas() {
           vy: (Math.random() - 0.5) * 0.45,
           radius: Math.random() * 1.8 + 1.2,
           alpha: Math.random() * 0.5 + 0.35,
-          // Color variety: IEEE blue, cyan, and subtle violet
-          colorType: i % 3 === 0 ? 'cyan' : i % 3 === 1 ? 'blue' : 'purple'
+          // Animated blue network variety: Electric Blue, Sapphire Blue, and Sky Blue
+          colorType: i % 3 === 0 ? 'electricBlue' : i % 3 === 1 ? 'sapphire' : 'skyBlue'
         });
       }
     };
@@ -67,7 +67,7 @@ export default function GlobalNetworkCanvas() {
       // Max connection distance
       const maxDist = width < 768 ? 95 : 135;
 
-      // Draw connection lines between nearby particles
+      // Draw connection lines between nearby particles in animated blue
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
@@ -75,49 +75,49 @@ export default function GlobalNetworkCanvas() {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < maxDist) {
-            const lineAlpha = (1 - dist / maxDist) * 0.22;
+            const lineAlpha = (1 - dist / maxDist) * 0.28;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            // Gradient connection stroke
+            // Sleek blue animated gradient line
             const gradient = ctx.createLinearGradient(
               particles[i].x, particles[i].y,
               particles[j].x, particles[j].y
             );
-            gradient.addColorStop(0, `rgba(0, 229, 255, ${lineAlpha})`);
-            gradient.addColorStop(1, `rgba(139, 92, 246, ${lineAlpha * 0.8})`);
+            gradient.addColorStop(0, `rgba(37, 99, 235, ${lineAlpha * 0.65})`);
+            gradient.addColorStop(1, `rgba(59, 130, 246, ${lineAlpha * 0.45})`);
             ctx.strokeStyle = gradient;
-            ctx.lineWidth = 0.85;
+            ctx.lineWidth = 0.95;
             ctx.stroke();
           }
         }
       }
 
-      // Draw glowing nodes
+      // Draw glowing blue nodes
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
-        // Glow halo
+        // Soft blue glow halo
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius * 2.8, 0, Math.PI * 2);
-        if (p.colorType === 'cyan') {
-          ctx.fillStyle = `rgba(0, 229, 255, ${p.alpha * 0.18})`;
-        } else if (p.colorType === 'blue') {
-          ctx.fillStyle = `rgba(0, 163, 224, ${p.alpha * 0.18})`;
+        if (p.colorType === 'electricBlue') {
+          ctx.fillStyle = `rgba(37, 99, 235, ${p.alpha * 0.16})`;
+        } else if (p.colorType === 'sapphire') {
+          ctx.fillStyle = `rgba(29, 78, 216, ${p.alpha * 0.14})`;
         } else {
-          ctx.fillStyle = `rgba(139, 92, 246, ${p.alpha * 0.18})`;
+          ctx.fillStyle = `rgba(96, 165, 250, ${p.alpha * 0.2})`;
         }
         ctx.fill();
 
-        // Node center
+        // Node center in crisp blue
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        if (p.colorType === 'cyan') {
-          ctx.fillStyle = `rgba(0, 240, 255, ${p.alpha})`;
-        } else if (p.colorType === 'blue') {
-          ctx.fillStyle = `rgba(56, 189, 248, ${p.alpha})`;
+        if (p.colorType === 'electricBlue') {
+          ctx.fillStyle = `rgba(37, 99, 235, ${p.alpha * 0.75})`;
+        } else if (p.colorType === 'sapphire') {
+          ctx.fillStyle = `rgba(29, 78, 216, ${p.alpha * 0.75})`;
         } else {
-          ctx.fillStyle = `rgba(167, 139, 250, ${p.alpha})`;
+          ctx.fillStyle = `rgba(59, 130, 246, ${p.alpha * 0.8})`;
         }
         ctx.fill();
 

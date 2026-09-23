@@ -30,7 +30,7 @@ export default function Hero() {
 
         {/* Conference Label */}
         <div className="hero-flagship-pill">
-          ANNUAL GLOBAL CELEBRATION &bull; 06 OCTOBER 2026
+          ANNUAL GLOBAL CELEBRATION &bull; 28 SEPTEMBER 2026
         </div>
 
         {/* Huge Conference Title */}
@@ -63,18 +63,30 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Vibrant Key Event Highlights Strip */}
+        {/* Vibrant Key Event Highlights Strip (Clean Outline Icons, No Emojis) */}
         <div className="hero-stats-strip">
           <div className="hero-stat-pill pill-cyan">
-            <span className="pill-icon">📅</span>
+            <span className="pill-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </span>
             <div>
-              <strong>October 2026</strong>
+              <strong>28 September 2026</strong>
               <span>Full Day Tech Fest</span>
             </div>
           </div>
 
           <div className="hero-stat-pill pill-amber">
-            <span className="pill-icon">📍</span>
+            <span className="pill-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </span>
             <div>
               <strong>Kongu Engineering College</strong>
               <span>Perundurai Campus</span>
@@ -82,10 +94,14 @@ export default function Hero() {
           </div>
 
           <div className="hero-stat-pill pill-emerald">
-            <span className="pill-icon">⚡</span>
+            <span className="pill-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </span>
             <div>
               <strong>7 Competitions</strong>
-              <span>Certificates & Prizes</span>
+              <span>Certificates &amp; Prizes</span>
             </div>
           </div>
         </div>

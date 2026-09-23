@@ -59,21 +59,21 @@ export default function ReadyToJoin() {
           {/* Benefits / Guarantees Strip */}
           <div className="ready-guarantees-row">
             <span className="ready-guarantee-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1688FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span>Free Student Registration</span>
             </span>
 
             <span className="ready-guarantee-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1688FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span>IEEE Participation Certificates</span>
             </span>
 
             <span className="ready-guarantee-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1688FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span>Exciting Cash Prizes &amp; Trophies</span>

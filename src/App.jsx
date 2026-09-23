@@ -4,7 +4,6 @@ import GlobalNetworkCanvas from './components/GlobalNetworkCanvas.jsx';
 import AnimatedShapes from './components/AnimatedShapes.jsx';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
-import ReadyToJoin from './components/ReadyToJoin.jsx';
 import Countdown from './components/Countdown.jsx';
 import About from './components/About.jsx';
 import Events from './components/Events.jsx';
@@ -37,10 +36,7 @@ export default function App() {
         {/* 2. Hero Section */}
         <Hero />
 
-        {/* 3. Featured Call to Action Section */}
-        <ReadyToJoin />
-
-        {/* 4. Global Event Countdown Section */}
+        {/* 3. Global Event Countdown Section */}
         <Countdown />
 
         {/* 5. About IEEE Day Section */}

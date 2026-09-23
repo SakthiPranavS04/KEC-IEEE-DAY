@@ -1,7 +1,7 @@
 // ============================================================
 // KONGU ENGINEERING COLLEGE - IEEE Day '26 Events Data
 // Official Lineup: 28 September 2026
-// Exact Google Form registration links per official event
+// Glassmorphism Theme: Zero Blue, Zero Violet
 // ============================================================
 
 export const eventGlobalInfo = {
@@ -30,19 +30,18 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
-    // [Mini Hackathon]
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfBX7NUFZ4_EfqkpvPMx0ui6J3-nnBi7TkIGI07QjbIi7YMdw/viewform",
     contacts: [
       { name: "Sharvesh A Y", phone: "9361191110" },
       { name: "Divyadharshini V", phone: "93425 65992" },
       { name: "Barath M D", phone: "6369978859" }
     ],
-    theme: "cyan",
-    accentColor: "#00E5FF",
-    gradient: "linear-gradient(135deg, #00E5FF 0%, #0077B6 100%)",
-    glowColor: "rgba(0, 229, 255, 0.5)",
-    bgLight: "rgba(0, 229, 255, 0.08)",
-    borderLight: "rgba(0, 229, 255, 0.3)"
+    theme: "emerald",
+    accentColor: "#10B981",
+    gradient: "linear-gradient(135deg, #34D399 0%, #059669 100%)",
+    glowColor: "rgba(16, 185, 129, 0.5)",
+    bgLight: "rgba(16, 185, 129, 0.08)",
+    borderLight: "rgba(16, 185, 129, 0.3)"
   },
   {
     id: "posterieee",
@@ -60,7 +59,6 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
-    // [Poster]
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeIxddsugT6WJozxMTJzvfU9ET2nVusDLcDeRJH-TdV62UGdg/viewform",
     contacts: [
       { name: "Srinithi", phone: "8122858146" },
@@ -90,14 +88,13 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
-    // [Code relay]
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSeJDSnsAWqUXRereipA6ExOJ_PrpahA-y7aM5mkQex0dJv-rw/viewform",
     contacts: [
       { name: "Sutharshan T", phone: "80721 09886" },
       { name: "Jayanivash P", phone: "94422 49452" },
       { name: "Lakshitha K K", phone: "98945 27965" }
     ],
-    theme: "emerald",
+    theme: "mint",
     accentColor: "#10B981",
     gradient: "linear-gradient(135deg, #10B981 0%, #059669 100%)",
     glowColor: "rgba(16, 185, 129, 0.5)",
@@ -120,7 +117,6 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
-    // Not provided in list - left null so only exact links are attached
     formUrl: null,
     contacts: [
       { name: "Srinithi M", phone: "8122858146" },
@@ -150,7 +146,6 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
-    // [Circuit Quest]
     formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSezhZx4P0jM8dZTU0n1j9Vf0BPKVUgQBmmaeEsYJJyNY8Kaag/viewform",
     contacts: [
       { name: "Srinithi M", phone: "8122858146" },
@@ -180,19 +175,18 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
-    // [Project]
     formUrl: "https://forms.gle/Apd8pXZwW4oYY5N88",
     contacts: [
       { name: "Vishal G", phone: "8778255251" },
       { name: "Sridhar R", phone: "9524027027" },
       { name: "Sarathi G", phone: "9585231520" }
     ],
-    theme: "purple",
-    accentColor: "#8B5CF6",
-    gradient: "linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%)",
-    glowColor: "rgba(139, 92, 246, 0.5)",
-    bgLight: "rgba(139, 92, 246, 0.08)",
-    borderLight: "rgba(139, 92, 246, 0.3)"
+    theme: "gold",
+    accentColor: "#F59E0B",
+    gradient: "linear-gradient(135deg, #FBBF24 0%, #D97706 100%)",
+    glowColor: "rgba(245, 158, 11, 0.5)",
+    bgLight: "rgba(245, 158, 11, 0.08)",
+    borderLight: "rgba(245, 158, 11, 0.3)"
   },
   {
     id: "paper-pixel",
@@ -210,7 +204,6 @@ export const events = [
     entry: "FREE",
     certificate: "E-Certificates will be provided",
     availability: "Limited spots available",
-    // [Paper Presentation]
     formUrl: "https://forms.gle/1Dvf1b5u9MpA5U2f7",
     contacts: [
       { name: "Srinithi", phone: "8122858146" },

@@ -17,10 +17,12 @@ export default function Events() {
   return (
     <section id="events" className="events-section">
       <div className="container">
-        {/* Section Header (Preserved) */}
+        {/* Section Header */}
         <div className="section-header">
           <span className="section-tag">Celebration Lineup</span>
-          <h2 className="section-title">Events</h2>
+          <h2 className="section-title">
+            Official <span className="gradient-text-rainbow">Events</span>
+          </h2>
           <p className="section-subtitle">
             Explore our official IEEE Day ’26 events and be part of the celebration.
           </p>

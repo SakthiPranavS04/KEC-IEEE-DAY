@@ -43,7 +43,7 @@ export default function Ambassador() {
     }
   };
 
-  // Auto-move every 5 seconds (5000ms), pausing on hover
+  // Auto-move every 3 seconds (3000ms), pausing on hover
   useEffect(() => {
     if (isPaused) return;
     const timer = setInterval(() => {
@@ -52,7 +52,7 @@ export default function Ambassador() {
         scrollToIndex(next);
         return next;
       });
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(timer);
   }, [isPaused, scrollToIndex]);
@@ -62,9 +62,9 @@ export default function Ambassador() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <span className="section-tag section-tag-amber">Leadership &amp; Mentorship</span>
+          <span className="section-tag">Leadership &amp; Mentorship</span>
           <h2 className="section-title">
-            Meet Our <span className="gradient-text-amber">Ambassadors</span>
+            Meet Our <span className="gradient-text-rainbow">Ambassadors</span>
           </h2>
           <p className="section-subtitle">
             Empowering students to connect, innovate, and lead in the global IEEE ecosystem.

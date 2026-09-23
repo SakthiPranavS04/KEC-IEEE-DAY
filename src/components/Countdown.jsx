@@ -14,8 +14,8 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    // Target date: October 6, 2026, 09:00:00 AM IST
-    const targetDate = new Date('2026-10-06T09:00:00').getTime();
+    // Target date: September 28, 2026, 09:00:00 AM IST
+    const targetDate = new Date('2026-09-28T09:00:00').getTime();
 
     const calculateTimeLeft = () => {
       const now = new Date().getTime();
@@ -50,7 +50,7 @@ export default function Countdown() {
             <span className="countdown-tag">GLOBAL EVENT COUNTDOWN</span>
             <h2 className="countdown-title">The Celebration Begins Soon</h2>
             <p className="countdown-subtitle">
-              Join thousands of engineers, researchers, and innovators celebrating IEEE Day worldwide on <strong>06 October 2026</strong>.
+              Join thousands of engineers, researchers, and innovators celebrating IEEE Day worldwide on <strong>28 September 2026 at 9:00 AM</strong>.
             </p>
           </div>
 
