@@ -12,7 +12,7 @@ export default function Navbar() {
         setScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -22,6 +22,7 @@ export default function Navbar() {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
+      // Update browser history hash without reload
       window.history.pushState(null, '', `#${targetId}`);
     }
   };
@@ -34,23 +35,23 @@ export default function Navbar() {
           href="#home" 
           className="navbar-brand" 
           onClick={(e) => handleNavClick(e, 'home')}
-          aria-label="KONGU ENGINEERING COLLEGE IEEE Day"
+          aria-label="KONGU ENGINEERING COLLEGE Home"
         >
           <img 
             src="/assets/logos/ieee-master.svg" 
             alt="IEEE Logo" 
             className="navbar-logo-img" 
-            width="88" 
-            height="32"
+            width="90" 
+            height="34"
           />
           <div className="navbar-brand-divider" aria-hidden="true"></div>
           <div className="navbar-brand-text">
             <span className="navbar-brand-name">KONGU ENGINEERING COLLEGE</span>
-            <span className="navbar-brand-sub">KEC IEEE Student Branch</span>
+            <span className="navbar-brand-sub">Perundurai, Erode</span>
           </div>
         </a>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation */}
         <nav aria-label="Main Navigation">
           <ul className="navbar-nav">
             <li>
@@ -64,18 +65,8 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#timeline" className="nav-link" onClick={(e) => handleNavClick(e, 'timeline')}>
-                Timeline
-              </a>
-            </li>
-            <li>
               <a href="#events" className="nav-link" onClick={(e) => handleNavClick(e, 'events')}>
                 Events
-              </a>
-            </li>
-            <li>
-              <a href="#gallery" className="nav-link" onClick={(e) => handleNavClick(e, 'gallery')}>
-                Gallery
               </a>
             </li>
             <li>
@@ -89,9 +80,13 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <a href="#events" className="btn-nav-register-gradient" onClick={(e) => handleNavClick(e, 'events')}>
-                <span>Register Now</span>
-                <span className="nav-btn-arrow" aria-hidden="true">&rarr;</span>
+              <a href="#contact" className="nav-link" onClick={(e) => handleNavClick(e, 'contact')}>
+                Contact
+              </a>
+            </li>
+            <li>
+              <a href="#events" className="btn-nav-register" onClick={(e) => handleNavClick(e, 'events')}>
+                Register Now &rarr;
               </a>
             </li>
           </ul>
@@ -111,50 +106,66 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Drawer (Glassmorphic) */}
+      {/* Mobile Menu Drawer */}
       <nav 
         className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`}
         aria-label="Mobile Navigation"
       >
-        <a href="#home" className="mobile-nav-link" onClick={(e) => handleNavClick(e, 'home')}>
+        <a 
+          href="#home" 
+          className="mobile-nav-link" 
+          onClick={(e) => handleNavClick(e, 'home')}
+        >
           <span>Home</span>
           <span aria-hidden="true">&rarr;</span>
         </a>
-        <a href="#about" className="mobile-nav-link" onClick={(e) => handleNavClick(e, 'about')}>
-          <span>About IEEE Day</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="#timeline" className="mobile-nav-link" onClick={(e) => handleNavClick(e, 'timeline')}>
-          <span>Heritage Timeline</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="#events" className="mobile-nav-link" onClick={(e) => handleNavClick(e, 'events')}>
-          <span>Events &amp; Competitions</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="#gallery" className="mobile-nav-link" onClick={(e) => handleNavClick(e, 'gallery')}>
-          <span>Celebration Gallery</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="#ambassador" className="mobile-nav-link" onClick={(e) => handleNavClick(e, 'ambassador')}>
-          <span>Meet Our Ambassador</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="#societies" className="mobile-nav-link" onClick={(e) => handleNavClick(e, 'societies')}>
-          <span>Our Societies</span>
-          <span aria-hidden="true">&rarr;</span>
-        </a>
-        <a href="#contact" className="mobile-nav-link" onClick={(e) => handleNavClick(e, 'contact')}>
-          <span>Contact &amp; Location</span>
+        <a 
+          href="#about" 
+          className="mobile-nav-link" 
+          onClick={(e) => handleNavClick(e, 'about')}
+        >
+          <span>About</span>
           <span aria-hidden="true">&rarr;</span>
         </a>
         <a 
           href="#events" 
-          className="btn-nav-register-gradient mobile-register-cta"
+          className="mobile-nav-link" 
           onClick={(e) => handleNavClick(e, 'events')}
         >
-          <span>Register for IEEE Day 2026</span>
+          <span>Events</span>
           <span aria-hidden="true">&rarr;</span>
+        </a>
+        <a 
+          href="#ambassador" 
+          className="mobile-nav-link" 
+          onClick={(e) => handleNavClick(e, 'ambassador')}
+        >
+          <span>Meet Our Ambassador</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+        <a 
+          href="#societies" 
+          className="mobile-nav-link" 
+          onClick={(e) => handleNavClick(e, 'societies')}
+        >
+          <span>Our Societies</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+        <a 
+          href="#contact" 
+          className="mobile-nav-link" 
+          onClick={(e) => handleNavClick(e, 'contact')}
+        >
+          <span>Contact</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+        <a 
+          href="#events" 
+          className="btn btn-primary" 
+          style={{ width: '100%', marginTop: '0.5rem', justifyContent: 'center' }}
+          onClick={(e) => handleNavClick(e, 'events')}
+        >
+          Register for IEEE Day 2026
         </a>
       </nav>
     </header>

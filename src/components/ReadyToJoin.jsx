@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * ReadyToJoin Component
  * The featured high-energy IEEE Day 2026 call to action displayed at the starting page.
- * Styled in the colorful gradient + glassmorphism theme.
+ * Prominently invites students to discover the competitions and register.
  */
 export default function ReadyToJoin() {
   const scrollToEvents = (e) => {
@@ -17,23 +17,17 @@ export default function ReadyToJoin() {
 
   return (
     <section id="ready-to-join" className="ready-to-join-section" aria-label="Ready to be part of IEEE Day 2026">
-      {/* Decorative ambient background glows */}
-      <div className="ready-ambient-mesh" aria-hidden="true">
-        <div className="ready-orb-purple"></div>
-        <div className="ready-orb-pink"></div>
-      </div>
-
       <div className="container">
-        <div className="ready-to-join-card-glass text-center">
+        <div className="ready-to-join-content text-center">
           {/* Top Pill Badge */}
-          <div className="ready-pill-badge-gradient">
-            <span>ANNUAL CELEBRATION &bull; 06 OCTOBER 2026</span>
+          <div className="ready-pill-badge">
+            ANNUAL CELEBRATION &bull; 06 OCTOBER 2026
           </div>
 
           {/* Main Huge Heading */}
           <h2 className="ready-heading">
             READY TO BE PART OF <br />
-            <span className="ready-highlight-gradient">IEEE DAY 2026?</span>
+            <span className="ready-highlight">IEEE DAY 2026?</span>
           </h2>
 
           {/* Theme / Lead Quote */}
@@ -51,7 +45,7 @@ export default function ReadyToJoin() {
             <a 
               href="#events" 
               onClick={scrollToEvents} 
-              className="btn btn-primary-gradient ready-btn-large"
+              className="btn-ready-register"
               id="start-register-btn"
             >
               <span>REGISTER NOW</span>
@@ -64,22 +58,22 @@ export default function ReadyToJoin() {
 
           {/* Benefits / Guarantees Strip */}
           <div className="ready-guarantees-row">
-            <span className="ready-guarantee-glass-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <span className="ready-guarantee-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1688FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span>Free Student Registration</span>
             </span>
 
-            <span className="ready-guarantee-glass-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <span className="ready-guarantee-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1688FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span>IEEE Participation Certificates</span>
             </span>
 
-            <span className="ready-guarantee-glass-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EC4899" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <span className="ready-guarantee-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1688FF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span>Exciting Cash Prizes &amp; Trophies</span>
