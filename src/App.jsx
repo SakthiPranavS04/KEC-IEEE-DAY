@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SplashScreen from './components/SplashScreen.jsx';
+import GlobalNetworkCanvas from './components/GlobalNetworkCanvas.jsx';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import About from './components/About.jsx';
@@ -13,6 +14,12 @@ export default function App() {
 
   return (
     <div className="app-container">
+      {/* Dynamic Global Digital Network Canvas Background */}
+      <GlobalNetworkCanvas />
+
+      {/* Futuristic Aurora Ambient Glow Mesh */}
+      <div className="aurora-ambient-glow" aria-hidden="true"></div>
+
       {/* 3-Second Initial Welcome Splash Screen */}
       {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
 

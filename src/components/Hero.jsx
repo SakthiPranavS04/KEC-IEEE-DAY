@@ -12,10 +12,12 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero-section">
-      {/* Dynamic Colorful Mesh Gradient Orbs */}
+      {/* Futuristic Aurora Gradient Waves & Light Beams */}
       <div className="hero-orb hero-orb-1" aria-hidden="true"></div>
       <div className="hero-orb hero-orb-2" aria-hidden="true"></div>
       <div className="hero-orb hero-orb-3" aria-hidden="true"></div>
+      <div className="hero-aurora-glow" aria-hidden="true"></div>
+      <div className="hero-ambient-rays" aria-hidden="true"></div>
       <div className="hero-bg-pattern" aria-hidden="true"></div>
 
       <div className="container hero-content">
