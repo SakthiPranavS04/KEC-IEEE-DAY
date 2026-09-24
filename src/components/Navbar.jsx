@@ -38,11 +38,11 @@ export default function Navbar() {
           aria-label="IEEE Student Branch Kongu Engineering College Home"
         >
           <img 
-            src="/assets/logos/ieee-master.svg" 
-            alt="IEEE Logo" 
+            src="/assets/logos/kec-ieee-logo.png" 
+            alt="IEEE Kongu Engineering College Logo" 
             className="navbar-logo-img" 
-            width="82" 
-            height="30"
+            width="100" 
+            height="36"
           />
           <img 
             src="/assets/logos/ieee-day-logo.png" 
