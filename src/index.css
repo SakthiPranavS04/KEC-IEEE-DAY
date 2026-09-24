@@ -2124,6 +2124,7 @@ button {
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top center;
   border: 3px solid #2563EB;
   box-shadow: 0 8px 30px rgba(37, 99, 235, 0.2);
   position: relative;
