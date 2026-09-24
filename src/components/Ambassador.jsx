@@ -103,7 +103,7 @@ export default function Ambassador() {
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src = '/assets/ambassador/ambassador.jpg';
+                      e.currentTarget.style.opacity = '0.7';
                     }}
                   />
                   <span className="ambassador-badge-tag">{ambassador.badge}</span>
