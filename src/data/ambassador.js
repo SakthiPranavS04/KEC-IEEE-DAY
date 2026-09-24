@@ -46,6 +46,34 @@ export const ambassadorsData = [
     quote: "Leveraging technology for a better tomorrow, fostering inclusive collaboration and student engineering excellence.",
     bio: "Driving web engineering, member experience, and inter-college student networking initiatives for IEEE celebrations.",
     tags: ["Web Architecture", "Community", "IEEE Day '26"]
+  },
+  {
+    id: 4,
+    name: "Sutharsan T",
+    role: "Webathon & Technical Ambassador",
+    tagline: "Technical & Code-Relay Coordinator",
+    badge: "Technical Lead",
+    department: "Dept. of Electronics & Communication",
+    organization: "KONGU ENGINEERING COLLEGE",
+    college: "Kongu Engineering College",
+    photo: "/assets/ambassador/sutharsan-t.jpg",
+    quote: "Challenging conventional boundaries through web programming, algorithmic thinking, and collaborative development.",
+    bio: "Spearheading web development competitions and empowering student developers to build modern, scalable engineering solutions.",
+    tags: ["Web Development", "Problem Solving", "Code-Relay"]
+  },
+  {
+    id: 5,
+    name: "Srinithi M",
+    role: "WIE & Circuit Debug Ambassador",
+    tagline: "WIE & Student Coordinator",
+    badge: "WIE Ambassador",
+    department: "Dept. of Electrical & Electronics",
+    organization: "KONGU ENGINEERING COLLEGE",
+    college: "Kongu Engineering College",
+    photo: "/assets/ambassador/srinithi-m.jpg",
+    quote: "Inspiring student engineers to push technical limits, solve real-world engineering challenges, and innovate for society.",
+    bio: "Actively leading hands-on circuit debugging contests, symposiums, and promoting women in engineering leadership across campus.",
+    tags: ["Circuit Debugging", "Women in STEM", "Leadership"]
   }
 ];
 
