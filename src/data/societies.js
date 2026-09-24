@@ -7,8 +7,8 @@
 export const societyLogos = [
   {
     id: "aps",
-    name: "IEEE Antennas & Propagation Society",
-    shortName: "IEEE AP-S",
+    name: "IEEE Antennas & Propagation Society (APS)",
+    shortName: "IEEE APS",
     badge: "Antennas & Propagation",
     logo: "/assets/logos/aps-logo.svg",
     website: "https://ieeeaps.org/",
@@ -25,7 +25,7 @@ export const societyLogos = [
   },
   {
     id: "wie",
-    name: "IEEE Women in Engineering",
+    name: "IEEE Women in Engineering (WIE)",
     shortName: "IEEE WIE",
     badge: "Affinity Group",
     logo: "/assets/logos/wie-logo.png",
@@ -34,7 +34,7 @@ export const societyLogos = [
   },
   {
     id: "ras",
-    name: "IEEE Robotics & Automation Society",
+    name: "IEEE Robotics & Automation Society (RAS)",
     shortName: "IEEE RAS",
     badge: "Robotics & Automation",
     logo: "/assets/logos/ras-logo.png",
@@ -43,7 +43,7 @@ export const societyLogos = [
   },
   {
     id: "pes",
-    name: "IEEE Power & Energy Society",
+    name: "IEEE Power & Energy Society (PES)",
     shortName: "IEEE PES",
     badge: "Power & Energy",
     logo: "/assets/logos/pes-logo.png",
@@ -52,20 +52,11 @@ export const societyLogos = [
   },
   {
     id: "comsoc",
-    name: "IEEE Communications Society",
+    name: "IEEE Communications Society (ComSoc)",
     shortName: "IEEE ComSoc",
     badge: "Communications",
     logo: "/assets/logos/comsoc-logo.svg",
     website: "https://www.comsoc.org/",
     description: "Driving world-class technological innovations in telecommunications and networking."
-  },
-  {
-    id: "pels",
-    name: "IEEE Power Electronics Society",
-    shortName: "IEEE PELS",
-    badge: "Power Electronics",
-    logo: "/assets/logos/pels-logo.png",
-    website: "https://www.ieee-pels.org/",
-    description: "Dedicated to the development and utility of power electronic technology."
   }
 ];
